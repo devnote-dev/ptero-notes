@@ -1,6 +1,6 @@
 # Nests
 
-{% swagger method="get" path="/nests" baseUrl="https://pterodactyl.domain/api/application" summary="Fetches a list of nests." %}
+{% swagger method="get" path="/nests" baseUrl="/api/application" summary="Fetches a list of nests." %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -78,7 +78,7 @@ Available includes: eggs, page, per_page, servers.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/nests/{id}" baseUrl="https://pterodactyl.domain/api/application" summary="Fetches a specific nest by its ID." %}
+{% swagger method="get" path="/nests/{id}" baseUrl="/api/application" summary="Fetches a specific nest by its ID." %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -119,7 +119,7 @@ Available includes: eggs, servers.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/nests/{id}/eggs" baseUrl="https://pterodactyl.domain/api/application" summary="Fetches a list of eggs of a specific nest." %}
+{% swagger method="get" path="/nests/{id}/eggs" baseUrl="/api/application" summary="Fetches a list of eggs of a specific nest." %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -508,7 +508,7 @@ Available includes: config, nest, servers, script, variables.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/nests/{id}/eggs/{egg}" baseUrl="https://pterodactyl.domain/api/application" summary="Fetches a specific egg from a specific nest." %}
+{% swagger method="get" path="/nests/{id}/eggs/{egg}" baseUrl="/api/application" summary="Fetches a specific egg from a specific nest." %}
 {% swagger-description %}
 
 {% endswagger-description %}

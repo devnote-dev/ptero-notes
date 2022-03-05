@@ -1,6 +1,6 @@
 # Nodes
 
-{% swagger method="get" path="/nodes" baseUrl="https://pterodactyl.domain/api/application" summary="Fetches a list of nodes." %}
+{% swagger method="get" path="/nodes" baseUrl="/api/application" summary="Fetches a list of nodes." %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -88,7 +88,7 @@ Available includes: allocations, locations, page, per_page, servers.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/nodes/{id}" baseUrl="https://pterodactyl.domain/api/application" summary="Fetches a specific node by its ID." %}
+{% swagger method="get" path="/nodes/{id}" baseUrl="/api/application" summary="Fetches a specific node by its ID." %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -146,7 +146,7 @@ The ID of the node.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/nodes/{id}/configuration" baseUrl="https://pterodactyl.domain/api/application" summary="Fetches the configuration of a specific node." %}
+{% swagger method="get" path="/nodes/{id}/configuration" baseUrl="/api/application" summary="Fetches the configuration of a specific node." %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -198,7 +198,7 @@ The ID of the node.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/nodes/{id}/allocations" baseUrl="https://pterodactyl.domain/api/application" summary="Fetches a list of allocations on a specific node." %}
+{% swagger method="get" path="/nodes/{id}/allocations" baseUrl="/api/application" summary="Fetches a list of allocations on a specific node." %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -433,7 +433,7 @@ Available includes: node, page, per_page.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="post" path="/nodes" baseUrl="https://pterodactyl.domain/api/application" summary="Creates a new node." %}
+{% swagger method="post" path="/nodes" baseUrl="/api/application" summary="Creates a new node." %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -534,7 +534,7 @@ The daemon port to assign to the node.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="post" path="/node/{id}/allocations" baseUrl="https://pterodactyl.domain/api/application" summary="Creates an allocation on a specific node." %}
+{% swagger method="post" path="/node/{id}/allocations" baseUrl="/api/application" summary="Creates an allocation on a specific node." %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -567,7 +567,7 @@ A list of ports to assign to the allocation.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="patch" path="/nodes/{id}" baseUrl="https://pterodactyl.domain/api/application" summary="Updates a specific node." %}
+{% swagger method="patch" path="/nodes/{id}" baseUrl="/api/application" summary="Updates a specific node." %}
 {% swagger-description %}
 Note:
 
@@ -683,7 +683,7 @@ The daemon port to assign to the node.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="delete" path="/nodes/{id}" baseUrl="https://pterodactyl.domain/api/application" summary="Deletes a specific node." %}
+{% swagger method="delete" path="/nodes/{id}" baseUrl="/api/application" summary="Deletes a specific node." %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -698,7 +698,7 @@ The ID of the node.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="delete" path="/nodes/{id}/allocations/{alloc}" baseUrl="https://pterodactyl.domain/api/application" summary="Deletes an allocation on a specific node." %}
+{% swagger method="delete" path="/nodes/{id}/allocations/{alloc}" baseUrl="/api/application" summary="Deletes an allocation on a specific node." %}
 {% swagger-description %}
 
 {% endswagger-description %}

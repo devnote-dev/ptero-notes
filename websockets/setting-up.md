@@ -22,7 +22,7 @@ Connecting to a server websocket requires a few steps before the actual initiali
 
 ### 1. Fetch the websocket authorization
 
-{% swagger method="get" path="/servers/{id}/websocket" baseUrl="https://pterodactyl.domain/api/client" summary="Fetches the websocket connection information for a specific server." %}
+{% swagger method="get" path="/servers/{id}/websocket" baseUrl="/api/client" summary="Fetches the websocket connection information for a specific server." %}
 {% swagger-description %}
 
 {% endswagger-description %}
