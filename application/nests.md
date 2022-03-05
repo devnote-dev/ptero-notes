@@ -5,22 +5,8 @@
 
 {% endswagger-description %}
 
-{% swagger-parameter in="query" name="include" type="String" %}
-Available includes: 
-
-`eggs`
-
-, 
-
-`page`
-
-,
-
-`per_page`
-
-, 
-
-`servers`
+{% swagger-parameter in="query" name="include" type="String" required="false" %}
+Available includes: eggs, page, per_page, servers.
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}
@@ -97,14 +83,8 @@ Available includes:
 
 {% endswagger-description %}
 
-{% swagger-parameter in="query" name="include" type="String" %}
-Available includes: 
-
-`eggs`
-
-, 
-
-`servers`
+{% swagger-parameter in="query" name="include" type="String" required="false" %}
+Available includes: eggs, servers.
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}
@@ -144,26 +124,8 @@ Available includes:
 
 {% endswagger-description %}
 
-{% swagger-parameter in="query" name="include" type="String" %}
-Available includes: 
-
-`config`
-
-, 
-
-`nest`
-
-, 
-
-`servers`
-
-, 
-
-`script`
-
-, 
-
-`variables`
+{% swagger-parameter in="query" name="include" type="String" required="false" %}
+Available includes: config, nest, servers, script, variables.
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}
@@ -551,26 +513,8 @@ Available includes:
 
 {% endswagger-description %}
 
-{% swagger-parameter in="query" name="include" type="String" %}
-Available includes: 
-
-`config`
-
-, 
-
-`nest`
-
-, 
-
-`servers`
-
-, 
-
-`script`
-
-, 
-
-`variables`
+{% swagger-parameter in="query" name="include" type="String" required="false" %}
+Available includes: config, nest, script, servers, variables.
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}

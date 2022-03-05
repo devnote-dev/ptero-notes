@@ -5,26 +5,8 @@
 
 {% endswagger-description %}
 
-{% swagger-parameter in="query" name="include" %}
-Available includes: 
-
-`allocations`
-
-, 
-
-`locations`
-
-, 
-
-`page`
-
-, 
-
-`per_page`
-
-, 
-
-`servers`
+{% swagger-parameter in="query" name="include" required="false" %}
+Available includes: allocations, locations, page, per_page, servers.
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}
@@ -225,22 +207,8 @@ The ID of the node.
 The ID of the node.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="query" name="include" type="String" %}
-Available includes: 
-
-`node`
-
-, 
-
-`page`
-
-, 
-
-`per_page`
-
-, 
-
-`save`
+{% swagger-parameter in="query" name="include" type="String" required="false" %}
+Available includes: node, page, per_page.
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}
@@ -601,15 +569,9 @@ A list of ports to assign to the allocation.
 
 {% swagger method="patch" path="/nodes/{id}" baseUrl="https://pterodactyl.domain/api/application" summary="Updates a specific node." %}
 {% swagger-description %}
-Note: 
+Note:
 
-`PATCH`
-
- operations require all other fields to update the resource. Those fields can be fetched with a 
-
-`GET`
-
- request to the resource.
+PATCH operations require all other fields to update the resource. Those fields can be fetched with a GET request to the resource.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="id" type="Integer" required="true" %}
