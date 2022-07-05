@@ -1,4 +1,4 @@
-## `GET /nodes`
+### `GET /nodes`
 Returns a list of node objects.
 
 ### Parameters
@@ -10,7 +10,7 @@ sort | ✅ | disk, id, memory, uuid
 page | ✅ | Any number
 per-page | ✅ | Any number
 
-## `GET /nodes/deployable`
+### `GET /nodes/deployable`
 Returns a list of deployable nodes.
 
 ### Parameters
@@ -30,10 +30,10 @@ memory | ✅ | `number` | The memory limit to query nodes by
 location_ids | ❌ | `number[]` | A list of location IDs to query nodes by
 page | ❌ | `number` | N/A
 
-## `GET /nodes/:id`
+### `GET /nodes/:id`
 Returns a node by its `id` (number). Supports the above "include" parameter.
 
-## `GET /nodes/:id/allocations`
+### `GET /nodes/:id/allocations`
 Returns a list of allocations on the node.
 
 ### Parameters
@@ -45,7 +45,7 @@ sort | ❌ |
 page | ✅ | Any number
 per-page | ✅ | Any number
 
-## `POST /nodes/:id/allocations`
+### `POST /nodes/:id/allocations`
 Creates an allocation on the node.
 
 ### Body
@@ -55,13 +55,13 @@ ip | ✅ | `string` | The IP to bind the allocation to
 alias | ❌ | `string` | The IP alias for the allocation
 ports | ✅ | `string[]` | A list of ports or port-ranges for the allocation.
 
-## `DELETE /nodes/:id/allocations/:id`
+### `DELETE /nodes/:id/allocations/:id`
 Deletes an allocation from the node by its `id` (number).
 
-## `GET /nodes/:id/configuration`
+### `GET /nodes/:id/configuration`
 Returns the configuration data of a specified node.
 
-## `POST /nodes`
+### `POST /nodes`
 Creates a node.
 
 ### Body
@@ -84,7 +84,7 @@ public | ❌ | `boolean` | Whether the node is publicly accessible
 scheme | ✅ | `string` | The HTTP scheme for the node
 upload_size | ❌ | `number` | The upload size for the node
 
-## `PATCH /nodes/:id`
+### `PATCH /nodes/:id`
 Updates a node by its `id` (number).
 
 ### Body
@@ -107,5 +107,5 @@ public | ❌ | `boolean` | Whether the node is publicly accessible
 scheme | ❌ | `string` | The HTTP scheme for the node
 upload_size | ❌ | `number` | The upload size for the node
 
-## `DELETE /nodes/:id`
+### `DELETE /nodes/:id`
 Deletes a node by its `id` (number).

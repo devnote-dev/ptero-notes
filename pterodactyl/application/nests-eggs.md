@@ -1,4 +1,4 @@
-## `GET /nests`
+### `GET /nests`
 Returns a list of nest objects.
 
 ### Parameters
@@ -10,10 +10,10 @@ sort | ❌ |
 page | ✅ | Any number
 per-page | ✅ | Any number
 
-## `GET /nests/:id`
+### `GET /nests/:id`
 Returns a nest by its `id` (number). Supports the above parameters.
 
-## `GET /nests/:id/eggs`
+### `GET /nests/:id/eggs`
 Returns a list of eggs in the nest.
 
 ### Parameters
@@ -25,5 +25,5 @@ sort | ❌ |
 page | ✅ | Any number
 per-page | ✅ | Any number
 
-## `GET /nests/:id/eggs/:id`
+### `GET /nests/:id/eggs/:id`
 Returns an egg in a nest by its `id` (number). Supports the above parameters.

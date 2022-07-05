@@ -7,7 +7,6 @@ Make sure you have set the `allowed_origins` option in your Wings configuration 
 Once you have connected to the websocket you must authenticate it with the token received from the panel (see [events](#events)). If successful, you should recieve an "auth success" event.
 
 ## Supported Libraries
-
 Language | Libraries
 ---------|----------
 Dart | https://api.dart.dev/stable/2.17.3/dart-io/WebSocket-class.html

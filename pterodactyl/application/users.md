@@ -1,4 +1,4 @@
-## `GET /users`
+### `GET /users`
 Returns a list of user objects.
 
 ### Parameters
@@ -10,10 +10,10 @@ sort | ✅ | id, uuid
 page | ✅ | Any number
 per-page | ✅ | Any number
 
-## `GET /users/:id`
+### `GET /users/:id`
 Returns a user by its `id` (number). Supports the above "include" parameter.
 
-## `POST /users`
+### `POST /users`
 Creates a user.
 
 ### Body
@@ -43,5 +43,5 @@ password | ❌ | `string` | The password for the account
 root_admin | ❌ | `boolean` | Whether the account will have administrative access
 username | ❌ | `string` | The account username
 
-## `DELETE /users/:id`
+### `DELETE /users/:id`
 Deletes a user account by its `id` (number).
