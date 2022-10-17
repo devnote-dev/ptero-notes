@@ -8,7 +8,7 @@ filter | ✅ | daemon_token_id, fqdn, name, uuid
 include | ✅ | allocations, locations, servers
 sort | ✅ | disk, id, memory, uuid
 page | ✅ | Any number
-per-page | ✅ | Any number
+per_page | ✅ | Any number
 
 ### `GET /nodes/deployable`
 Returns a list of deployable nodes.
@@ -20,7 +20,7 @@ filter | ❌ |
 include | ❌ |
 sort | ❌ |
 page | ✅ | Any number
-per-page | ✅ | Any number
+per_page | ✅ | Any number
 
 ### Body
 Key | Required | Type | Description
@@ -43,7 +43,7 @@ filter | ✅ | ip, ip_alias, port, server_id
 include | ✅ | node, server
 sort | ❌ |
 page | ✅ | Any number
-per-page | ✅ | Any number
+per_page | ✅ | Any number
 
 ### `POST /nodes/:id/allocations`
 Creates an allocation on the node.

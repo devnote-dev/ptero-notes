@@ -8,7 +8,7 @@ filter | ✅ | email, external_id, username, uuid
 include | ✅ | servers
 sort | ✅ | id, uuid
 page | ✅ | Any number
-per-page | ✅ | Any number
+per_page | ✅ | Any number
 
 ### `GET /users/:id`
 Returns a user by its `id` (number). Supports the above "include" parameter.

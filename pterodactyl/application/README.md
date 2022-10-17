@@ -16,7 +16,7 @@ filter | `filter[key]=value` | Filters the requested resource by the value of a 
 include | `include=a,b,c` | A list of objects related to the requested resource to include in the response. Multiple include arguments must be separated by **commas only**, not spaces or other separators.
 sort | `sort=key` | Sorts the requested resources according to the specified key. By default the sorted objects are in ascending order, but can be negated by prefixing the key with a dash (e.g. `sort=-id`).
 page | `page=1` | The number of the page to retrieve the requested resource from. This works in line with the `per_page` parameter.
-per-page | `per_page=50` | The number of objects to return from the requested resource. If the request resource returns more than the specified number, it will overlap onto the next page(s).
+per_page | `per_page=50` | The number of objects to return from the requested resource. If the request resource returns more than the specified number, it will overlap onto the next page(s).
 
 ## Statuses
 All possible status codes that can be received from the application API. Note that this only includes status code 500 from the 5xx group, the rest of the status codes are not directly related to the API.

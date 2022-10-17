@@ -8,7 +8,7 @@ filter | ❌ |
 include | ✅ | eggs, servers
 sort | ❌ |
 page | ✅ | Any number
-per-page | ✅ | Any number
+per_page | ✅ | Any number
 
 ### `GET /nests/:id`
 Returns a nest by its `id` (number). Supports the above parameters.
@@ -23,7 +23,7 @@ filter | ❌ |
 include | ✅ | config, nest, script, servers, variables
 sort | ❌ |
 page | ✅ | Any number
-per-page | ✅ | Any number
+per_page | ✅ | Any number
 
 ### `GET /nests/:id/eggs/:id`
 Returns an egg in a nest by its `id` (number). Supports the above parameters.

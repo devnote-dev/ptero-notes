@@ -8,7 +8,7 @@ filter | ❌ |
 include | ✅ | allocations, eggs, subusers, variables
 sort | ❌ |
 page | ✅ | Any number
-per-page | ✅ | Any number
+per_page | ✅ | Any number
 
 ### `GET /servers/:identifier/websocket`
 Returns the websocket authentication details for a server. This includes the socket URL and JWT authentication token. See the [wings/websockets](../../wings/websocket.md) page for more information.
@@ -17,8 +17,6 @@ Returns the websocket authentication details for a server. This includes the soc
 Returns the current resource usage for a server, including the status and uptime.
 
 ### `GET /servers/:identifier/activity`
-> New to v1.8
-
 Returns a list of activity objects recorded on the server.
 
 ### `POST /servers/:identifier/command`

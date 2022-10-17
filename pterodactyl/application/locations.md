@@ -8,7 +8,7 @@ filter | ✅ | short, long
 include | ✅ | nodes, servers
 sort | ✅ | id
 page | ✅ | Any number
-per-page | ✅ | Any number
+per_page | ✅ | Any number
 
 ### `GET /locations/:id`
 Returns a location by its `id` (number). Supports the above "include" parameter.
