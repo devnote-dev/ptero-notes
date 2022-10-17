@@ -3,7 +3,7 @@ Below is a list of curated API wrappers and libraries for Pterodactyl maintained
 
 Name                                                            | Language(s)   | Supports
 ----------------------------------------------------------------|---------------|-------------------------------
-[Bash-PteroAPI](https://github.com/Silent-dawn/bash-pteroapi)   | Bash          | Application
+[Bash-PteroAPI](https://github.com/Silent-dawn/bash-pteroapi)   | Bash          | Client
 [Crocgodyl](https://github.com/parkervcp/crocgodyl)             | Go            | Application, Client
 [Dartactyl](https://github.com/TekExplorer/dartactyl)           | Dart          | Client, Websocket
 [Elidactyl](https://github.com/kintu-games/elidactyl)           | Elixir        | Application
