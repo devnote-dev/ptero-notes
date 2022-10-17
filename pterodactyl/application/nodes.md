@@ -1,3 +1,33 @@
+### Example Model
+```json
+{
+  "allocated_resources": {
+    "disk": 26512,
+    "memory": 12368
+  },
+  "behind_proxy": false,
+  "created_at": "2022-01-03T09:25:00+00:00",
+  "daemon_base": "/var/lib/pterodactyl/volumes",
+  "daemon_listen": 7373,
+  "daemon_sftp": 3033,
+  "description": "ptero test node",
+  "disk": 72000,
+  "disk_overallocate": -1,
+  "fqdn": "nodes.pterodactyl.test",
+  "id": 1,
+  "location_id": 1,
+  "maintenance_mode": false,
+  "memory": 16000,
+  "memory_overallocate": -1,
+  "name": "ID1",
+  "public": true,
+  "scheme": "https",
+  "updated_at": "2022-08-25T10:49:25+00:00",
+  "upload_size": 100,
+  "uuid": "21412d5d-4f65-4ba8-8803-6e1754b9b4e6"
+}
+```
+
 ### `GET /nodes`
 Returns a list of node objects.
 

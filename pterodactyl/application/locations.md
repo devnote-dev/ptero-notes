@@ -1,9 +1,20 @@
+### Example Model
+```json
+{
+    "created_at": "2022-02-15T06:35:34+00:00",
+    "id": 1,
+    "long": "london",
+    "short": "gb",
+    "updated_at": "2022-02-15T06:58:30+00:00"
+}
+```
+
 ### `GET /locations`
 Returns a list of location objects.
 
 ### Parameters
 Name | Supported | Allowed Values
-----------|-----------|---------------
+-----|-----------|---------------
 filter | ✅ | short, long
 include | ✅ | nodes, servers
 sort | ✅ | id

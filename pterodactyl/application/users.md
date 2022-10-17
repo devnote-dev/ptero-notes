@@ -1,3 +1,21 @@
+### Example Model
+```json
+{
+  "2fa": false,
+  "created_at": "2022-09-15T17:33:34+00:00",
+  "email": "example@example.com",
+  "external_id": null,
+  "first_name": "test",
+  "id": 4,
+  "language": "en",
+  "last_name": "user",
+  "root_admin": true,
+  "updated_at": "2022-09-15T17:33:35+00:00",
+  "username": "test-user",
+  "uuid": "4c45016d-0148-4794-89b6-970e0b429b54"
+}
+```
+
 ### `GET /users`
 Returns a list of user objects.
 
