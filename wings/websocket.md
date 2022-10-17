@@ -7,21 +7,32 @@ Make sure you have set the `allowed_origins` option in your Wings configuration 
 Once you have connected to the websocket you must authenticate it with the token received from the panel (see [events](#events)). If successful, you should recieve an "auth success" event.
 
 ## Supported Libraries
-Language | Libraries
----------|----------
-Dart | https://api.dart.dev/stable/2.17.3/dart-io/WebSocket-class.html
-Go | https://pkg.go.dev/nhooyr.io/websocket
+
+Language    | Libraries
+------------|----------
+Dart        | https://api.dart.dev/stable/2.17.3/dart-io/WebSocket-class.html
+Go          | https://pkg.go.dev/nhooyr.io/websocket
 Java/Kotlin | https://square.github.io/okhttp/
-JS/TS | https://www.npmjs.com/package/ws https://www.npmjs.com/package/websocket
-Python | https://pypi.org/project/websockets/ https://pypi.org/project/python-socketio/
-Rust | https://docs.rs/websocket/latest/websocket/
+JS/TS       | https://www.npmjs.com/package/ws https://www.npmjs.com/package/websocket
+Python      | https://pypi.org/project/websockets/ https://pypi.org/project/python-socketio/
+Rust        | https://docs.rs/websocket/latest/websocket/
 
 ## Events
-All events being sent or recieved from the websocket are in the following JSON object format: `{"event":"<event name>","args":[<event arguments>]}`. Websocket payloads will always have the event name, but the event arguments can be empty.
+All events being sent or recieved from the websocket are in the following JSON object format:
+```json
+{
+    "event":"<event name>",
+    "args": [<event arguments>]
+}
+```
+_Replace the values with `<>` accordingly._
+
+Websocket payloads will always have the event name, but the event arguments can be empty.
 
 When sending requests to the server, make sure the payload is in the above format. If the event requires arguments, they must be in string form.
 
 ### Events you can send
+
 Name | Arguments | Description
 -----|-----------|------------
 auth | the websocket auth token | Authenticates the websocket connection.
@@ -31,6 +42,7 @@ send logs | | Requests the console logs for the server.
 send stats | | Requests the server statistics.
 
 ### Events you can recieve
+
 Name | Arguments | Description
 -----|-----------|------------
 auth success | | The authentication was successful.
@@ -56,4 +68,4 @@ Websocket tokens last around 20 minutes, with a "token expiring" event sent afte
 1. Request a new token from the panel
 2. Send an "auth" event with the new token
 
-It's advised to reauthenticate the connection when you recieve the "token expiring" warning event, as the connection is not always kept open for 20 minutes (can vary ~2 minute difference).
+It's advised to reauthenticate the connection when you recieve the "token expiring" warning event, as the connection is not always kept open for 20 minutes.
