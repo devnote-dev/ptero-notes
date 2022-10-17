@@ -4,9 +4,9 @@ Below is a list of curated API wrappers and libraries for Pterodactyl maintained
 Name                                                            | Language(s)   | Supports
 ----------------------------------------------------------------|---------------|-------------------------------
 [Bash-PteroAPI](https://github.com/Silent-dawn/bash-pteroapi)   | Bash          | Application
+[Crocgodyl](https://github.com/parkervcp/crocgodyl)             | Go            | Application, Client
 [Dartactyl](https://github.com/TekExplorer/dartactyl)           | Dart          | Client, Websocket
 [Elidactyl](https://github.com/kintu-games/elidactyl)           | Elixir        | Application
-[Crocgodyl](https://github.com/parkervcp/crocgodyl)             | Go            | Application, Client
 [Nodeactyl](https://github.com/Nodeactyl/Nodeactyl)             | JS            | Application, Client
 [Pterodcatyl4J](https://github.com/mattmalec/Pterodactyl4J)     | Java, Kotlin  | Application, Client, Websocket
 [PteroJS](https://github.com/PteroPackages/PteroJS)             | JS, TS        | Application, Client, Websocket
