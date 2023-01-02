@@ -11,17 +11,6 @@ Make sure you have set the `allowed_origins` field in your Wings configuration t
 
 Once you have connected to the websocket you must authenticate it with the token received from the panel (see [events](#events)). If successful, you will recieve an "auth success" event.
 
-## Supported Libraries
-
-| Language    | Libraries                                                                      |
-| ----------- | ------------------------------------------------------------------------------ |
-| Dart        | https://api.dart.dev/stable/2.17.3/dart-io/WebSocket-class.html                |
-| Go          | https://pkg.go.dev/nhooyr.io/websocket                                         |
-| Java/Kotlin | https://square.github.io/okhttp/                                               |
-| JS/TS       | https://www.npmjs.com/package/ws https://www.npmjs.com/package/websocket       |
-| Python      | https://pypi.org/project/websockets/ https://pypi.org/project/python-socketio/ |
-| Rust        | https://docs.rs/websocket/latest/websocket/                                    |
-
 ## Events
 
 All events being sent or recieved from the websocket are in the following JSON object format:
