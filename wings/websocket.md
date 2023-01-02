@@ -1,12 +1,15 @@
 # Websockets
 
-Server websockets can provide a constant stream of information about the server to the client.
+Server websockets can provide a constant stream of information about the server to the client in real-time.
 
 ## Access
 
-Make sure you have set the `allowed_origins` option in your Wings configuration to your IP address or `"*"` if you want to allow all origins. Alternatively, you can include the `Origin` header when establishing the connection if the library you're using supports it.
+Make sure you have set the `allowed_origins` field in your Wings configuration to your Fully Qualified Domain Name (FQDN), IP address or `"*"` if you want to allow all origins. Alternatively, you can include the `Origin` header with your panel URL or an allowed origin when establishing the connection if the library you're using supports it.
 
-Once you have connected to the websocket you must authenticate it with the token received from the panel (see [events](#events)). If successful, you should recieve an "auth success" event.
+> **Warning**
+> The `allowed_origins` field does not support pattern matching, meaning that you cannot allow all routes of a particular domain or IP dynamically (e.g. `192.168.1.*`).
+
+Once you have connected to the websocket you must authenticate it with the token received from the panel (see [events](#events)). If successful, you will recieve an "auth success" event.
 
 ## Supported Libraries
 
@@ -32,9 +35,7 @@ All events being sent or recieved from the websocket are in the following JSON o
 
 _Replace the values with `<>` accordingly._
 
-Websocket payloads will always have the event name, but the event arguments can be empty.
-
-When sending requests to the server, make sure the payload is in the above format. If the event requires arguments, they must be in string form.
+Websocket payloads will always have the event name, but the event arguments can be empty or unset. When sending requests to the websocket, make sure the payload is in the above format. If the event requires arguments, they must be in string form.
 
 ### Events you can send
 
@@ -69,9 +70,9 @@ When sending requests to the server, make sure the payload is in the above forma
 
 ## Heartbeating
 
-Websocket tokens last around 20 minutes, with a "token expiring" event sent after around 5 minutes prior. In order to keep the websocket connection open, a new token needs to be sent before the connection closes. This process is called heartbeating, and can be done with these 2 steps:
+Websocket tokens can last upto 20 minutes, with a "token expiring" event sent around 5 minutes prior to closing. In order to keep the websocket connection open, a new token needs to be sent before the connection closes. This process is commonly called heartbeating, and can be done with these 2 steps:
 
-1. Request a new token from the panel
+1. Request a new token from the panel ([websocket endpoint](/pterodactyl/client/servers.md#get-serversidentifierwebsocket))
 2. Send an "auth" event with the new token
 
-It's advised to reauthenticate the connection when you recieve the "token expiring" warning event, as the connection is not always kept open for 20 minutes.
+It's advised to reauthenticate the connection when you recieve the "token expiring" warning event, as the connection is not always kept open for the full 20 minutes.

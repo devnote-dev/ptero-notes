@@ -1,9 +1,10 @@
 # Wings API
 
-This API is mainly for communication between the panel and Wings, so this section will only cover necessary endpoints.
+The Wings API is used for communicating to the panel and other Wings instances on the panel.
+
+> **Note**
+> The Wings API does not have any control over the literal server instances in the panel, only the Docker containers for said servers and the server volumes. Use the [application API](/pterodactyl/application/README.md) for server control.
 
 # Access
 
-The `Authorization` header must be present in the requests and must be prefixed with "Bearer " followed by the node token ID. The token can be obtained in the configuration page of a node in the admin panel, or from the [node configuration endpoint](/pterodactyl/application/nodes.md#get-nodesidconfiguration) in the application API.
-
-The `Content-Type` and `Accept` headers are also required for `POST`, `PATCH` and `PUT` requests. Requests that require a body should be in the format of a **JSON string** unless otherwise specified (see endpoint specific information).
+The `Authorization` header must be present in the requests and must be prefixed with "Bearer " followed by the node's token (also known as the daemon token or master daemon key). The token can be obtained in the configuration page of a node in the admin panel, or from the [node configuration endpoint](/pterodactyl/application/nodes.md#get-nodesidconfiguration) in the application API. The `Accept` header must be set to "application/json" for requests, and the `Content-Type` must be set appropriately when making `POST`, `PATCH` or `PUT` requests.
