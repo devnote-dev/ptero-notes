@@ -266,6 +266,7 @@ Pulls a file from a remote location and downloads it into the server's volume. A
 
 | Field      | Visibility | Type    | Description                                             |
 | ---------- | ---------- | ------- | ------------------------------------------------------- |
+| url        | required   | string  | The URL of the file to download.
 | directory  | optional   | string  | The root directory to download the file into.           |
 | file_name  | optional   | string  | The name to save the file as.                           |
 | foreground | optional   | boolean | Whether the request should be downloaded synchronously. |
