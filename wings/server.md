@@ -76,7 +76,7 @@ Sources:
 
 - [router/router_server.go#L53](https://github.com/pterodactyl/wings/blob/release/v1.11.2/router/router_server.go#L53)
 
-### `POST `/api/servers/:uuid/commands`
+### `POST /api/servers/:uuid/commands`
 
 Sends one or more commands to the server console.
 
