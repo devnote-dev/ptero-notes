@@ -26,7 +26,7 @@ Sources:
 - [FileController.php#L77](https://github.com/pterodactyl/panel/blob/release/v1.11.3/app/Http/Controllers/Api/Client/Servers/FileController.php#L77)
 - [tokens/file.go](https://github.com/pterodactyl/wings/blob/release/v1.11.2/router/tokens/file.go)
 
-### `GET /upload/file`
+### `POST /upload/file`
 
 Uploads the given file(s) to a server matching the identifiers set in the required `token` query parameter. It is a JWT token comprised of the following claims:
 
