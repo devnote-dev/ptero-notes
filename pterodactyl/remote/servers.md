@@ -45,14 +45,14 @@ Sources
 
 ```json
 {
-  data: [
+  "data": [
     {
-      server: string,
-      event: string,
-      timestamp: string, // timestamp
-      metadata: , // null, string or json blob with event specific metadata (it depends)
-      ip: string, // ip address or empty string
-      user: string, // user uuid or empty string
+      "server": string,
+      "event": string,
+      "timestamp": string, // timestamp
+      "metadata": , // null, string or json blob with event specific metadata (it depends)
+      "ip": string, // ip address or empty string
+      "user": string, // user uuid or empty string
     },
     ...
   ]
