@@ -27,17 +27,17 @@ This page lists the JWT specifications for Wings API.
 - Include `server_uuid` and `permissions` in the JWT.
 - `permissions` has be an array of strings, which can be these following permission values:
 
-> ```text
-> "websocket.connect"
-> "control.console"
-> "control.start"
-> "control.stop"
-> "control.restart"
-> "admin.websocket.errors"
-> "admin.websocket.install"
-> "admin.websocket.transfer"
-> "backup.read"
-> ```
+```text
+"websocket.connect"
+"control.console"
+"control.start"
+"control.stop"
+"control.restart"
+"admin.websocket.errors"
+"admin.websocket.install"
+"admin.websocket.transfer"
+"backup.read"
+```
 
 - After connecting to the WebSocket, you have to send `{ "event": "auth", "args": ["token here"] }`.
 - Also, tokens expires in 20 minutes.
