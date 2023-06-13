@@ -31,10 +31,10 @@ Handles updating the state of a backup.
 ```json
 {
   "data": {
-    "checksum": string,
-    "checksum_type": string,
-    "size": number,
-    "successful", boolean,
+    "checksum": "a0b124c3def45g67890h12i3j4567k8l9mn01234",
+    "checksum_type": "sha1",
+    "size": 1234,
+    "successful": true,
     "parts": [
       {
         "etag": string,
@@ -44,6 +44,8 @@ Handles updating the state of a backup.
   }
 }
 ```
+
+Note: `parts` can also be defined as `null`.
 
 ### Responses
 
