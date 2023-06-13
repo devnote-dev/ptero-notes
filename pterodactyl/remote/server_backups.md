@@ -16,6 +16,8 @@ Sources
 
 - [app/Http/Controllers/Api/Remote/Backups/BackupRemoteUploadController.php#L33](https://github.com/pterodactyl/panel/blob/v1.11.3/app/Http/Controllers/Api/Remote/Backups/BackupRemoteUploadController.php#L33)
 
+---
+
 ### `POST /api/remote/backups/:backup`
 
 Handles updating the state of a backup.
@@ -54,6 +56,8 @@ WIP.
 Sources
 
 - [app/Http/Controllers/Api/Remote/Backups/BackupStatusController.php#L31](https://github.com/pterodactyl/panel/blob/v1.11.3/app/Http/Controllers/Api/Remote/Backups/BackupStatusController.php#L31)
+
+---
 
 ### `POST /api/remote/backups/:backup/restore`
 

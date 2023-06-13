@@ -10,6 +10,8 @@ Sources
 
 - [app/Http/Controllers/Api/Remote/Servers/ServerDetailsController.php#L35](https://github.com/pterodactyl/panel/blob/v1.11.3/app/Http/Controllers/Api/Remote/Servers/ServerDetailsController.php#L35)
 
+---
+
 ### `GET /api/remote/servers/:uuid/install`
 
 Returns installation information for a server.
@@ -21,6 +23,8 @@ WIP.
 Sources
 
 - [app/Http/Controllers/Api/Remote/Servers/ServerInstallController.php#L30](https://github.com/pterodactyl/panel/blob/v1.11.3/app/Http/Controllers/Api/Remote/Servers/ServerInstallController.php#L30)
+
+---
 
 ### `POST /api/remote/servers/:uuid/install`
 
