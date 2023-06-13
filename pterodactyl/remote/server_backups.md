@@ -4,9 +4,9 @@ Returns the required presigned urls to upload a backup to S3 cloud storage.
 
 ### Parameters
 
-| Name      | Visibility | Description                     |
-| --------- | ---------- | ------------------------------- |
-| size | optional | The amount of backup URLs to give. |
+| Name      | Visibility | Description                        |
+| --------- | ---------- | ---------------------------------- |
+| size      | optional   | The amount of backup URLs to give. |
 
 ### Responses
 
@@ -22,9 +22,9 @@ Handles updating the state of a backup.
 
 ### Body
 
-| Name  | Visibility | Type   | Description                                  |
-| ----- | ---------- | ------ | -------------------------------------------- |
-| data | required | object | An object containing the checksum, checksum type, backup size, success state, and parts of the backup. |
+| Name  | Visibility | Type   | Description                                                                                            |
+| ----- | ---------- | ------ | ------------------------------------------------------------------------------------------------------ |
+| data  | required   | object | An object containing the checksum, checksum type, backup size, success state, and parts of the backup. |
 
 ### Example Body
 
@@ -59,9 +59,9 @@ Handles toggling the restoration status of a server.
 
 ### Body
 
-| Name  | Visibility | Type   | Description                                  |
-| ----- | ---------- | ------ | -------------------------------------------- |
-| successful | required | boolean | The success state of the backup restoration. |
+| Name       | Visibility | Type    | Description                                  |
+| ---------- | ---------- | ------- | -------------------------------------------- |
+| successful | required   | boolean | The success state of the backup restoration. |
 
 ### Responses
 

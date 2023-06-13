@@ -28,10 +28,10 @@ Updates the installation state of a server.
 
 ### Body
 
-| Name  | Visibility | Type   | Description                                  |
-| ----- | ---------- | ------ | -------------------------------------------- |
-| successful | required | boolean | Notifies if the server has completed the installation process. |
-| reinstall | required | boolean | The state of the server. |
+| Name       | Visibility | Type    | Description                                                    |
+| ---------- | ---------- | ------- | -------------------------------------------------------------- |
+| successful | required   | boolean | Notifies if the server has completed the installation process. |
+| reinstall  | required   | boolean | The state of the server.                                       |
 
 ### Responses
 

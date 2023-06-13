@@ -4,10 +4,10 @@ Lists all servers with their configurations that are assigned to the requesting 
 
 ### Parameters
 
-| Name      | Visibility | Description                     |
-| --------- | ---------- | ------------------------------- |
-| page | optional | The page to list. |
-| per_page | optional | The amount of servers to list. |
+| Name      | Visibility | Description                    |
+| --------- | ---------- | ------------------------------ |
+| page      | optional   | The page to list.              |
+| per_page  | optional   | The amount of servers to list. |
 
 ### Responses
 
@@ -39,7 +39,7 @@ Sources
 
 | Name  | Visibility | Type   | Description                                  |
 | ----- | ---------- | ------ | -------------------------------------------- |
-| data | required | array | An array with all server activity data. |
+| data  | required   | array  | An array with all server activity data.      |
 
 ### Example Body
 
