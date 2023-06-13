@@ -28,15 +28,15 @@ This page lists the JWT specifications for Wings API.
 - `permissions` has be an array of strings, which can be these following permission values:
 
 ```text
-"websocket.connect"
-"control.console"
-"control.start"
-"control.stop"
-"control.restart"
-"admin.websocket.errors"
-"admin.websocket.install"
-"admin.websocket.transfer"
-"backup.read"
+websocket.connect
+control.console
+control.start
+control.stop
+control.restart
+admin.websocket.errors
+admin.websocket.install
+admin.websocket.transfer
+backup.read
 ```
 
 - After connecting to the WebSocket, you have to send `{ "event": "auth", "args": ["token here"] }`.
