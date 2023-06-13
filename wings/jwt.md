@@ -28,7 +28,7 @@ This page lists the JWT specifications for Wings API.
 - `permissions` has be an array of strings, which can be these following permission values:
 
 ```json
-[
+"permissions": [
   "websocket.connect",
   "control.console",
   "control.start",
