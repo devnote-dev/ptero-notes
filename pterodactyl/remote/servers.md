@@ -11,7 +11,147 @@ Lists all servers with their configurations that are assigned to the requesting 
 
 ### Responses
 
-WIP.
+| Code | Description                 |
+| ---- | --------------------------- |
+| 200  | The request was successful. |
+
+### Response example
+
+```json
+{
+  "data": [
+    {
+      "uuid": "0a123456-bcd7-8901-e234-567fgh890ij1",
+      "settings": {
+        "uuid": "0a123456-bcd7-8901-e234-567fgh890ij1",
+        "meta": {
+          "name": "My server",
+          "description": ""
+        },
+        "suspended": false,
+        "environment": {
+          "SERVER_JARFILE": "server.jar",
+          "MC_VERSION": "latest",
+          "BUILD_TYPE": "recommended",
+          "FORGE_VERSION": "",
+          "STARTUP": "java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true $( [[  ! -f unix_args.txt ]] && printf %s \"-jar {{SERVER_JARFILE}}\" || printf %s \"@unix_args.txt\" )",
+          "P_SERVER_LOCATION": "home",
+          "P_SERVER_UUID": "0a123456-bcd7-8901-e234-567fgh890ij1",
+          "P_SERVER_ALLOCATION_LIMIT": 0
+        },
+        "invocation": "java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true $( [[  ! -f unix_args.txt ]] && printf %s \"-jar {{SERVER_JARFILE}}\" || printf %s \"@unix_args.txt\" )",
+        "skip_egg_scripts": false,
+        "build": {
+          "memory_limit": 0,
+          "swap": 0,
+          "io_weight": 500,
+          "cpu_limit": 0,
+          "threads": null,
+          "disk_space": 0,
+          "oom_disabled": true
+        },
+        "container": {
+          "image": "ghcr.io/pterodactyl/yolks:java_8",
+          "oom_disabled": true,
+          "requires_rebuild": false
+        },
+        "allocations": {
+          "force_outgoing_ip": false,
+          "default": {
+            "ip": "192.168.228.1",
+            "port": 25565
+          },
+          "mappings": {
+            "192.168.228.1": [
+              25565
+            ]
+          }
+        },
+        "mounts": [],
+        "egg": {
+          "id": "b3e7a6b9-1cc9-4d3e-9372-88b6d96c6b0f",
+          "file_denylist": []
+        }
+      },
+      "process_configuration": {
+        "startup": {
+          "done": [
+            ")! For help, type "
+          ],
+          "user_interaction": [],
+          "strip_ansi": false
+        },
+        "stop": {
+          "type": "command",
+          "value": "stop"
+        },
+        "configs": [
+          {
+            "parser": "properties",
+            "file": "server.properties",
+            "replace": [
+              {
+                "match": "server-ip",
+                "replace_with": "0.0.0.0"
+              },
+              {
+                "match": "server-port",
+                "replace_with": "25565"
+              },
+              {
+                "match": "query.port",
+                "replace_with": "25565"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "links": {
+    "first": "http://localhost/api/remote/servers?page=1",
+    "last": "http://localhost/api/remote/servers?page=3",
+    "prev": null,
+    "next": "http://localhost/api/remote/servers?page=2"
+  },
+  "meta": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 3,
+    "links": [
+      {
+        "url": null,
+        "label": "&laquo; Previous",
+        "active": false
+      },
+      {
+        "url": "http://localhost/api/remote/servers?page=1",
+        "label": "1",
+        "active": true
+      },
+      {
+        "url": "http://localhost/api/remote/servers?page=2",
+        "label": "2",
+        "active": false
+      },
+      {
+        "url": "http://localhost/api/remote/servers?page=3",
+        "label": "3",
+        "active": false
+      },
+      {
+        "url": "http://localhost/api/remote/servers?page=2",
+        "label": "Next &raquo;",
+        "active": false
+      }
+    ],
+    "path": "http://localhost/api/remote/servers",
+    "per_page": 1,
+    "to": 1,
+    "total": 3
+  }
+}
+```
 
 Sources
 
