@@ -20,7 +20,18 @@ Authenticate a set of credentials and return the associated server details for a
 
 ### Response example
 
-WIP.
+```json
+{
+  "user": "1abc23de-4567-89f0-ghi1-h2kl345m6nop",
+  "server": "1a234567-8b9c-01d2-ef3g-45hi67j890kl",
+  "permissions": [
+    "*",
+    "admin.websocket.errors",
+    "admin.websocket.install",
+    "admin.websocket.transfer"
+  ]
+}
+```
 
 Sources
 
