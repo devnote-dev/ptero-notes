@@ -6,11 +6,19 @@ Authenticate a set of credentials and return the associated server details for a
 
 | Name     | Visibility | Type   | Description                                                                                      |
 | -------- | ---------- | ------ | ------------------------------------------------------------------------------------------------ |
-| type     | required   | string | Determine if the password should check authentication with either the "public_key" or "ssh_key". |
+| type     | required   | string | Determine if the password should check authentication with either the "password" or "public_key". |
 | username | required   | string | The username of the user attempting to login.                                                    |
 | password | required   | string | The password of the user attempting to login.                                                    |
 
 ### Responses
+
+| Code | Description                              |
+| ---- | ---------------------------------------- |
+| 200  | The response was successful.             |
+| 403  | Incorrect credentials.                   |
+| 422  | Missing fields. (ex. username, password) |
+
+### Response example
 
 WIP.
 
