@@ -8,7 +8,7 @@ The daemon notifies the panel about a transfer success.
 | ---- | --------------------------------- |
 | 204  | The request was successful.       |
 | 404  | The server was not found.         |
-| 409  | Server is not being transferred   |
+| 409  | Server is not being transferred.  |
 
 Sources
 
@@ -26,7 +26,7 @@ The daemon notifies the panel about a transfer failure.
 | ---- | --------------------------------- |
 | 204  | The request was successful.       |
 | 404  | The server was not found.         |
-| 409  | Server is not being transferred   |
+| 409  | Server is not being transferred.  |
 
 Sources
 
