@@ -109,10 +109,10 @@ Lists all servers with their configurations that are assigned to the requesting 
     }
   ],
   "links": {
-    "first": "http://localhost/api/remote/servers?page=1",
-    "last": "http://localhost/api/remote/servers?page=3",
+    "first": "http://127.0.0.1/api/remote/servers?page=1",
+    "last": "http://127.0.0.1/api/remote/servers?page=3",
     "prev": null,
-    "next": "http://localhost/api/remote/servers?page=2"
+    "next": "http://127.0.0.1/api/remote/servers?page=2"
   },
   "meta": {
     "current_page": 1,
@@ -125,27 +125,27 @@ Lists all servers with their configurations that are assigned to the requesting 
         "active": false
       },
       {
-        "url": "http://localhost/api/remote/servers?page=1",
+        "url": "http://127.0.0.1/api/remote/servers?page=1",
         "label": "1",
         "active": true
       },
       {
-        "url": "http://localhost/api/remote/servers?page=2",
+        "url": "http://127.0.0.1/api/remote/servers?page=2",
         "label": "2",
         "active": false
       },
       {
-        "url": "http://localhost/api/remote/servers?page=3",
+        "url": "http://127.0.0.1/api/remote/servers?page=3",
         "label": "3",
         "active": false
       },
       {
-        "url": "http://localhost/api/remote/servers?page=2",
+        "url": "http://127.0.0.1/api/remote/servers?page=2",
         "label": "Next &raquo;",
         "active": false
       }
     ],
-    "path": "http://localhost/api/remote/servers",
+    "path": "http://127.0.0.1/api/remote/servers",
     "per_page": 1,
     "to": 1,
     "total": 3
@@ -165,7 +165,9 @@ Resets the state of all servers on the node to be normal.
 
 ### Responses
 
-WIP.
+| Code | Description                 |
+| ---- | --------------------------- |
+| 204  | The request was successful. |
 
 Sources
 
