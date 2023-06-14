@@ -10,11 +10,27 @@ Returns the required presigned urls to upload a backup to S3 cloud storage.
 
 ### Responses
 
-WIP.
+| Code | Description                                                    |
+| ---- | -------------------------------------------------------------- |
+| 200  | The response was successful.                                   |
+| 400  | The configured backup adapter is not an S3 compatible adapter. |
+| 404  | The backup was not found.                                      |
+| 409  | Backup is already in completed state.                          |
+
+### Response examples
+
+WIP. Add example data for 'parts'. (note: the response example below was not tested, and manually written based on the panel code.)
+
+```json
+{
+  "parts": [],
+  "part_size": 5368709120 
+}
+```
 
 Sources
 
-- [app/Http/Controllers/Api/Remote/Backups/BackupRemoteUploadController.php#L33](https://github.com/pterodactyl/panel/blob/v1.11.3/app/Http/Controllers/Api/Remote/Backups/BackupRemoteUploadController.php#L33)
+- [app/Http/Controllers/Api/Remote/Backups/BackupRemoteUpl2oadController.php#L33](https://github.com/pterodactyl/panel/blob/v1.11.3/app/Http/Controllers/Api/Remote/Backups/BackupRemoteUploadController.php#L33)
 
 ---
 
@@ -71,7 +87,10 @@ Handles toggling the restoration status of a server.
 
 ### Responses
 
-WIP.
+| Code | Description                  |
+| ---- | ---------------------------- |
+| 204  | The response was successful. |
+| 404  | The backup was not found.    |
 
 Sources
 
