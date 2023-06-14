@@ -46,7 +46,7 @@ This page lists the JWT specifications for Wings API.
 
 ### Notes
 
-- Tokens typically require in 5 minutes with few exceptions.
+- Tokens typically expire in 5 minutes with few exceptions.
 - Most tokens require `server_uuid` with the exception of `POST /api/servers/:uuid/transfer`, which uses `sub` instead.
 - JWTs use the `HS256` algorithm.
 - All JWTs require these values: **Note: Make sure to include the other required values based on the route you're making a JWT for.**
