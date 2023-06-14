@@ -274,7 +274,10 @@ server:task.update
 
 ### Responses
 
-WIP.
+| Code | Description                                      |
+| ---- | ------------------------------------------------ |
+| 200  | The response was successful. (no request body)   |
+| 422  | Incorrect field data.                            |
 
 Sources
 
