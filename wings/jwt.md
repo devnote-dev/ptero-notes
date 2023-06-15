@@ -11,12 +11,12 @@ This page lists the JWT specifications for Wings API.
 
 **Make sure to include the other required values based on the route the JWT is for.**
 
-| Field      | Type     | Description                                                                                                          |
-| ---------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
-| iss        | string   | The value for 'remote' in config.json. This is the panel's url.                                                      |
-| aud        | string[] | An array containing a value of the the FQDN value, which is the Wings url.                                           |
-| unique_id  | string   | A random value. This can be anything.                                                                                |
-| jti        | string   | MD5 encryption of either the value of 'server_uuid' (in most cases) or 'sub' (for POST /api/servers/:uuid/transfer). |
+| Field      | Type     | Description                                                                                                            |
+| ---------- | -------- | ---------------------------------------------------------------------------------------------------------------------- |
+| iss        | string   | The value for `remote` in config.json. This is the panel's url.                                                        |
+| aud        | string[] | An array containing a value of the the FQDN value, which is the Wings url.                                             |
+| unique_id  | string   | A random value. This can be anything.                                                                                  |
+| jti        | string   | MD5 encryption of either the value of `server_uuid` (in most cases) or `sub` (for `POST /api/servers/:uuid/transfer`). |
 
 Don't forget that most tokens require `server_uuid` in the JWT as well with the exception of `POST /api/servers/:uuid/transfer`, which uses `sub` instead.
 
