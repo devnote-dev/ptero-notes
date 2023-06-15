@@ -19,14 +19,7 @@ Returns the required presigned urls to upload a backup to S3 cloud storage.
 
 ### Response examples
 
-WIP. Add example data for 'parts'. (note: the response example below was not tested, and manually written based on the panel code.)
-
-```json
-{
-  "parts": [],
-  "part_size": 5368709120 
-}
-```
+WIP.
 
 Sources
 
@@ -58,7 +51,7 @@ Handles updating the state of a backup.
 }
 ```
 
-Note: `parts` can also be defined as `null`.
+Note: `parts` can also be defined as an array with objects with the keys `etag` (string) and `part_number` (number).
 
 ### Responses
 
