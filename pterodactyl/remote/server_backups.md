@@ -15,7 +15,7 @@ Returns the required presigned urls to upload a backup to S3 cloud storage.
 | 200  | The response was successful.                                   |
 | 400  | The configured backup adapter is not an S3 compatible adapter. |
 | 404  | The backup was not found.                                      |
-| 409  | Backup is already in completed state.                          |
+| 409  | The backup is already in completed state.                      |
 
 ### Response examples
 
@@ -67,7 +67,16 @@ Note: `parts` can also be defined as `null`.
 
 ### Responses
 
-WIP.
+| Code | Description                               |
+| ---- | ----------------------------------------- |
+| 202  | The response was successful.              |
+| 204  | No content.                               |
+| 400  | The backup is already in completed state. |
+| 404  | The backup was not found.                 |
+
+### Response example
+
+WIP. Is there even any?
 
 Sources
 
