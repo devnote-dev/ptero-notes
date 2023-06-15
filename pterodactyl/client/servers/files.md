@@ -2,7 +2,7 @@
 
 Returns a list of files in a given directory. If the directory is not provided, it defaults to the home directory `/`.
 
-### Query Parameters
+### Body
 
 | Name      | Visibility | Type   | Description                      |
 | --------- | ---------- | ------ | -------------------------------- |
@@ -39,9 +39,9 @@ Returns a list of files in a given directory. If the directory is not provided, 
 
 ### `GET /api/client/servers/:identifier/files/contents`
 
-Return the contents of a specified file for the user.
+Returns the contents of a specified file for the user.
 
-### Query Parameters
+### Body
 
 | Name | Visibility | Type   | Description      |
 | ---- | ---------- | ------ | ---------------- |
@@ -57,7 +57,7 @@ Return the contents of a specified file for the user.
 
 Generates a one-time token with a link that the user can use to download a given file.
 
-### Query Parameters
+### Body
 
 | Name | Visibility | Type   | Description      |
 | ---- | ---------- | ------ | ---------------- |
@@ -84,7 +84,7 @@ Generates a one-time token with a link that the user can use to download a given
 
 Renames a file on the remote machine.
 
-### Request Body
+### Body
 
 | Name    | Visibility | Type           | Description                |
 | ------- | ---------- | -------------  | -------------------------- |
@@ -101,7 +101,7 @@ Renames a file on the remote machine.
 
 Copies a file on the server.
 
-### Request Body
+### Body
 
 | Name     | Visibility | Type   | Description          |
 | -------- | ---------- | ------ | -------------------- |
@@ -117,7 +117,7 @@ Copies a file on the server.
 
 Writes the contents of the specified file to the server.
 
-### Request Body
+### Body
 
 | Name  | Visibility | Type          | Description       |
 | ----- | ---------- | --------------| ----------------- |
@@ -134,7 +134,7 @@ Writes the contents of the specified file to the server.
 
 Compresses files on the server.
 
-### Request Body
+### Body
 
 | Name    | Visibility | Type          | Description                      |
 | ------- | ---------- | --------------| -------------------------------- |
@@ -151,7 +151,7 @@ Compresses files on the server.
 
 Decompresses files on the server.
 
-### Request Body
+### Body
 
 | Name    | Visibility | Type          | Description                      |
 | ------- | ---------- | --------------| -------------------------------- |
@@ -168,7 +168,7 @@ Decompresses files on the server.
 
 Deletes files or folders on the server.
 
-### Request Body
+### Body
 
 | Name    | Visibility | Type          | Description                |
 | ------- | ---------- | --------------| -------------------------- |
@@ -185,7 +185,7 @@ Deletes files or folders on the server.
 
 Creates a new folder on the server. If the root directory is not provided it defaults to `/`.
 
-### Request Body
+### Body
 
 | Name  | Visibility | Type   | Description                  |
 | ----- | ---------- | ------ | ---------------------------- |
@@ -202,7 +202,7 @@ Creates a new folder on the server. If the root directory is not provided it def
 
 Updates file permissions for file(s) on the server.
 
-### Request Body
+### Body
 
 | Name   | Visibility | Type          | Description                  |
 | ------ | ---------- | ------------- | ---------------------------- |
@@ -221,7 +221,7 @@ Updates file permissions for file(s) on the server.
 
 Requests that a file be downloaded from a remote location by Wings.
 
-### Request Body
+### Body
 
 | Name        | Visibility | Type   | Description                  |
 | ----------- | ---------- | ------ | ---------------------------- |
