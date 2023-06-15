@@ -64,13 +64,9 @@ Note: `parts` can also be defined as `null`.
 
 | Code | Description                               |
 | ---- | ----------------------------------------- |
-| 202  | The response was successful.              |
+| 204  | The response was successful.              |
 | 400  | The backup is already in completed state. |
 | 404  | The backup was not found.                 |
-
-### Response example
-
-WIP. Is there even any?
 
 Sources
 
