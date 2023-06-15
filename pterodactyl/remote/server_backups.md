@@ -53,12 +53,7 @@ Handles updating the state of a backup.
     "checksum_type": "sha1",
     "size": 1234,
     "successful": true,
-    "parts": [
-      {
-        "etag": string,
-        "part_number": number,
-      }
-    ]
+    "parts": null
   }
 }
 ```
@@ -70,7 +65,6 @@ Note: `parts` can also be defined as `null`.
 | Code | Description                               |
 | ---- | ----------------------------------------- |
 | 202  | The response was successful.              |
-| 204  | No content.                               |
 | 400  | The backup is already in completed state. |
 | 404  | The backup was not found.                 |
 
