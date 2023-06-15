@@ -6,7 +6,7 @@ Returns the required presigned urls to upload a backup to S3 cloud storage.
 
 | Name      | Visibility | Description                        |
 | --------- | ---------- | ---------------------------------- |
-| size      | optional   | The amount of backup URLs to give. |
+| size      | optional   | The backup file size.              |
 
 ### Responses
 
