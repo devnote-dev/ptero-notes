@@ -2,12 +2,6 @@
 
 Retrieves a paginated list of backups for a given server.
 
-### Body
-
-| Name     | Visibility | Type | Description                |
-| -------- | ---------- | ---- | -------------------------- |
-| per_page | Optional   | int  | Number of results per page |
-
 ### Response
 
 | Code | Description        |
@@ -131,7 +125,7 @@ Toggles the lock status of a specific backup.
 
 Restores a specific backup.
 
-#### Body
+### Body
 
 | Name     | Visibility | Type    | Description                                            |
 | -------- | ---------- | ------- | ------------------------------------------------------ |

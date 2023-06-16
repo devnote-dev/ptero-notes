@@ -36,7 +36,7 @@ Returns all the databases that belong to the given server.
 
 Creates a new database for the given server and return it.
 
-### Request Parameters
+### Body
 
 | Name     | Visibility | Type   | Description  |
 | -------- | ---------- | ------ | ------------ |

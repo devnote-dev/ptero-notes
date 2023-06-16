@@ -1,4 +1,4 @@
-### `GET /api/client/servers/:identifier/files/list`
+### `GET /api/client/servers/:serverId/files/list`
 
 Returns a list of files in a given directory. If the directory is not provided, it defaults to the home directory `/`.
 
@@ -37,7 +37,7 @@ Returns a list of files in a given directory. If the directory is not provided, 
 }
 ```
 
-### `GET /api/client/servers/:identifier/files/contents`
+### `GET /api/client/servers/:serverId/files/contents`
 
 Returns the contents of a specified file for the user.
 
@@ -53,7 +53,7 @@ Returns the contents of a specified file for the user.
 | ---- | ------------ |
 | 200  | File content |
 
-### `GET /api/client/servers/:identifier/files/download`
+### `GET /api/client/servers/:serverId/files/download`
 
 Generates a one-time token with a link that the user can use to download a given file.
 
@@ -75,21 +75,21 @@ Generates a one-time token with a link that the user can use to download a given
 {
   "object": "signed_url",
   "attributes": {
-    "url": "https:\/\/pterodactyl.file.properties:3000/download/file?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlX3BhdGgiOiJkZXNrdG9wL3Rlc3QucGRmIiwic2VydmVyX3V1aWQiOiJ1c2VyLWlkIn0.u6Ln6vZDP1Z8fxSoZ7i7J9RTx69R5_Hn6mIF5xGm4O8"
+    "url": "https://pterodactyl.file.properties:3000/download/file?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlX3BhdGgiOiJkZXNrdG9wL3Rlc3QucGRmIiwic2VydmVyX3V1aWQiOiJ1c2VyLWlkIn0.u6Ln6vZDP1Z8fxSoZ7i7J9RTx69R5_Hn6mIF5xGm4O8"
   }
 }
 ```
 
-### `PUT /api/client/servers/:identifier/files/rename`
+### `PUT /api/client/servers/:serverId/files/rename`
 
 Renames a file on the remote machine.
 
 ### Body
 
-| Name    | Visibility | Type           | Description                |
-| ------- | ---------- | -------------  | -------------------------- |
-| root    | Required   | string         | Root directory             |
-| files[] | Required   | array[string]  | Files to rename (multiple) |
+| Name    | Visibility | Type          | Description                |
+| ------- | ---------- | ------------- | -------------------------- |
+| root    | Required   | string        | Root directory             |
+| files[] | Required   | array[string] | Files to rename (multiple) |
 
 ### Responses
 
@@ -97,7 +97,7 @@ Renames a file on the remote machine.
 | ---- | ------------ |
 | 204  | File renamed |
 
-### `POST /api/client/servers/:identifier/files/copy`
+### `POST /api/client/servers/:serverId/files/copy`
 
 Copies a file on the server.
 
@@ -113,16 +113,16 @@ Copies a file on the server.
 | ---- | ----------- |
 | 204  | File copied |
 
-### `POST /api/client/servers/:identifier/files/write`
+### `POST /api/client/servers/:serverId/files/write`
 
 Writes the contents of the specified file to the server.
 
 ### Body
 
-| Name  | Visibility | Type          | Description       |
-| ----- | ---------- | --------------| ----------------- |
-| file  | Required   | string        | File to write     |
-| -     | Required   | array[string] | Content of the file to be written |
+| Name | Visibility | Type   | Description                       |
+| ---- | ---------- | ------ | --------------------------------- |
+| file | Required   | string | File to write                     |
+| -    | Required   | string | Content of the file to be written |
 
 ### Responses
 
@@ -130,16 +130,16 @@ Writes the contents of the specified file to the server.
 | ---- | ------------ |
 | 204  | File written |
 
-### `POST /api/client/servers/:identifier/files/compress`
+### `POST /api/client/servers/:serverId/files/compress`
 
 Compresses files on the server.
 
 ### Body
 
-| Name    | Visibility | Type          | Description                      |
-| ------- | ---------- | --------------| -------------------------------- |
-| root    | Required   | string        | Root directory for compression   |
-| files[] | Required   | array[string] | Files to compress (multiple)     |
+| Name    | Visibility | Type          | Description                    |
+| ------- | ---------- | ------------- | ------------------------------ |
+| root    | Required   | string        | Root directory for compression |
+| files[] | Required   | array[string] | Files to compress (multiple)   |
 
 ### Responses
 
@@ -147,16 +147,16 @@ Compresses files on the server.
 | ---- | --------------------------- |
 | 200  | Compressed file information |
 
-### `POST /api/client/servers/:identifier/files/decompress`
+### `POST /api/client/servers/:serverId/files/decompress`
 
 Decompresses files on the server.
 
 ### Body
 
-| Name    | Visibility | Type          | Description                      |
-| ------- | ---------- | --------------| -------------------------------- |
-| root    | Required   | string        | Root directory for compression   |
-| files[] | Required   | array[string] | Files to decompress (multiple)   |
+| Name    | Visibility | Type          | Description                    |
+| ------- | ---------- | ------------- | ------------------------------ |
+| root    | Required   | string        | Root directory for compression |
+| files[] | Required   | array[string] | Files to decompress (multiple) |
 
 ### Responses
 
@@ -164,14 +164,14 @@ Decompresses files on the server.
 | ---- | ------------------ |
 | 204  | Files decompressed |
 
-### `POST /api/client/servers/:identifier/files/delete`
+### `POST /api/client/servers/:serverId/files/delete`
 
 Deletes files or folders on the server.
 
 ### Body
 
 | Name    | Visibility | Type          | Description                |
-| ------- | ---------- | --------------| -------------------------- |
+| ------- | ---------- | ------------- | -------------------------- |
 | root    | Required   | string        | Root directory             |
 | files[] | Required   | array[string] | Files to delete (multiple) |
 
@@ -181,16 +181,16 @@ Deletes files or folders on the server.
 | ---- | ------------- |
 | 204  | Files deleted |
 
-### `POST /api/client/servers/:identifier/files/create-folder`
+### `POST /api/client/servers/:serverId/files/create-folder`
 
 Creates a new folder on the server. If the root directory is not provided it defaults to `/`.
 
 ### Body
 
-| Name  | Visibility | Type   | Description                  |
-| ----- | ---------- | ------ | ---------------------------- |
-| name  | Required   | string | Name of the folder           |
-| root  | Optional   | string | Root directory (default: '/') |
+| Name | Visibility | Type   | Description                   |
+| ---- | ---------- | ------ | ----------------------------- |
+| name | Required   | string | Name of the folder            |
+| root | Optional   | string | Root directory (default: '/') |
 
 ### Responses
 
@@ -198,16 +198,16 @@ Creates a new folder on the server. If the root directory is not provided it def
 | ---- | -------------- |
 | 204  | Folder created |
 
-### `POST /api/client/servers/:identifier/files/chmod`
+### `POST /api/client/servers/:serverId/files/chmod`
 
 Updates file permissions for file(s) on the server.
 
 ### Body
 
-| Name   | Visibility | Type          | Description                  |
-| ------ | ---------- | ------------- | ---------------------------- |
-| root   | Required   | string        | Root directory               |
-| files  | Required   | array[string] | Files to change permissions  |
+| Name  | Visibility | Type          | Description                 |
+| ----- | ---------- | ------------- | --------------------------- |
+| root  | Required   | string        | Root directory              |
+| files | Required   | array[string] | Files to change permissions |
 
 ### Responses
 
@@ -217,19 +217,19 @@ Updates file permissions for file(s) on the server.
 
 ---
 
-### `POST /api/client/servers/:identifier/files/pull`
+### `POST /api/client/servers/:serverId/files/pull`
 
 Requests that a file be downloaded from a remote location by Wings.
 
 ### Body
 
-| Name        | Visibility | Type   | Description                  |
-| ----------- | ---------- | ------ | ---------------------------- |
-| url         | Required   | string | URL of the file to download  |
-| directory   | Required   | string | Destination directory        |
-| filename    | Optional   | string | Filename                     |
-| use_header  | Optional   | bool   | Use header                   |
-| foreground  | Optional   | bool   | Foreground                   |
+| Name       | Visibility | Type   | Description                 |
+| ---------- | ---------- | ------ | --------------------------- |
+| url        | Required   | string | URL of the file to download |
+| directory  | Required   | string | Destination directory       |
+| filename   | Optional   | string | Filename                    |
+| use_header | Optional   | bool   | Use header                  |
+| foreground | Optional   | bool   | Foreground                  |
 
 ### Responses
 
@@ -237,7 +237,7 @@ Requests that a file be downloaded from a remote location by Wings.
 | ---- | ----------- |
 | 204  | File pulled |
 
-### `GET /api/client/servers/:identifier/files/upload`
+### `GET /api/client/servers/:serverId/files/upload`
 
 Returns a signed URL where files can be uploaded to.
 

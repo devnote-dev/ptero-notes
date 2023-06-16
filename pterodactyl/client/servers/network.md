@@ -74,13 +74,6 @@ Updates the notes of a specific allocation for a server.
 
 Sets a specific allocation as the primary allocation for a server.
 
-### Request Parameters
-
-| Name       | Type   | Description                    |
-| ---------- | ------ | ------------------------------ |
-| server     | string | ID of the server                |
-| allocation | string | ID of the allocation            |
-
 ### Responses
 
 | Code | Description                    |
@@ -90,13 +83,6 @@ Sets a specific allocation as the primary allocation for a server.
 ### `DELETE /api/client/servers/:serverId/network/allocations/:allocationId`
 
 Deletes a specific allocation from a server.
-
-### Request Parameters
-
-| Name       | Type   | Description                    |
-| ---------- | ------ | ------------------------------ |
-| server     | string | ID of the server                |
-| allocation | string | ID of the allocation            |
 
 ### Responses
 
