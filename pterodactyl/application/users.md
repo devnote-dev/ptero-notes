@@ -35,6 +35,10 @@ Returns a list of user objects.
 
 Returns a user by its `id` (number). Supports the above "include" parameter.
 
+### `GET /users/external/:external_id`
+
+Return a user by its 'external_id` (string). Supports the above "include" parameter.
+
 ### `POST /users`
 
 Creates a user.
