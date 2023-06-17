@@ -2,12 +2,16 @@
 
 This page lists the JWT specifications for Wings API.
 
-## JWT header format
+## Signing the token
+
+Make sure to sign the token using the `token` value from the node configuration.
+
+## Header format
 
 - Tokens typically expire in 5 minutes with few exceptions.
 - JWTs use the `HS256` algorithm.
 
-## JWT payload format
+## Payload format
 
 **Make sure to include the other required values based on the route the JWT is for.**
 
