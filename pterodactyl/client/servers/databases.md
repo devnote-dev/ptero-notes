@@ -38,10 +38,10 @@ Creates a new database for the given server and return it.
 
 ### Body
 
-| Name     | Visibility | Type   | Description  |
-| -------- | ---------- | ------ | ------------ |
-| database | Required   | string | Database name |
-| remote   | Required   | -      | Not specified |
+| Name     | Visibility | Type   | Description         |
+| -------- | ---------- | ------ | ------------------- |
+| database | Required   | string | Database name       |
+| remote   | Required   | string | Database remote URL |
 
 ### Responses
 
