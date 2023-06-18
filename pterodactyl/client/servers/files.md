@@ -41,6 +41,9 @@ Returns a list of files in a given directory. If the directory is not provided, 
 
 Returns the contents of a specified file for the user.
 
+> **Note**
+> The content type of the response will always be in the `text/plain` format.
+
 ### Body
 
 | Name | Visibility | Type   | Description      |
