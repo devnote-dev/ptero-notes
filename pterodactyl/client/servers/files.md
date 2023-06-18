@@ -1,6 +1,6 @@
 ### `GET /api/client/servers/:serverId/files/list`
 
-Returns a list of files in a given directory. If the directory is not provided, it defaults to the home directory `/`.
+Returns a list of files in a given directory. If the directory is not provided, it defaults to the home directory `/home/container`.
 
 ### Body
 
@@ -92,7 +92,21 @@ Renames a file on the remote machine.
 | Name    | Visibility | Type          | Description                |
 | ------- | ---------- | ------------- | -------------------------- |
 | root    | Required   | string        | Root directory             |
-| files[] | Required   | array[string] | Files to rename (multiple) |
+| files[] | Required   | array[object] | Files to rename (multiple) |
+
+### Example Body
+
+```json
+{
+  "root": "/",
+  "files": [
+    {
+      "file": "bungeecord.jar",
+      "mode": 493
+    }
+  ]
+}
+```
 
 ### Responses
 
@@ -120,12 +134,27 @@ Copies a file on the server.
 
 Writes the contents of the specified file to the server.
 
+### Request Parameters
+
+| Name | Type   | Description                          |
+| ---- | ------ | ------------------------------------ |
+| file | string | URL encoded path to the desired file |
+
 ### Body
 
-| Name | Visibility | Type   | Description                       |
-| ---- | ---------- | ------ | --------------------------------- |
-| file | Required   | string | File to write                     |
-| -    | Required   | string | Content of the file to be written |
+| Name | Visibility | Type       | Description                       |
+| ---- | ---------- | ---------- | --------------------------------- |
+| -    | Required   | text/plain | Content of the file to be written |
+
+**Note**
+
+> The request body contains the content that will be written to the file. It can be provided in any format, although the `text/plain` format is commonly used.
+
+### Example Body
+
+```
+  This is the content of a file with a .txt extension.
+```
 
 ### Responses
 
@@ -142,7 +171,21 @@ Compresses files on the server.
 | Name    | Visibility | Type          | Description                    |
 | ------- | ---------- | ------------- | ------------------------------ |
 | root    | Required   | string        | Root directory for compression |
-| files[] | Required   | array[string] | Files to compress (multiple)   |
+| files[] | Required   | array[object] | Files to compress (multiple)   |
+
+### Example Body
+
+```json
+{
+  "root": "/",
+  "files": [
+    {
+      "file": "bungeecord.jar",
+      "mode": 493
+    }
+  ]
+}
+```
 
 ### Responses
 
@@ -159,7 +202,21 @@ Decompresses files on the server.
 | Name    | Visibility | Type          | Description                    |
 | ------- | ---------- | ------------- | ------------------------------ |
 | root    | Required   | string        | Root directory for compression |
-| files[] | Required   | array[string] | Files to decompress (multiple) |
+| files[] | Required   | array[object] | Files to decompress (multiple) |
+
+### Example Body
+
+```json
+{
+  "root": "/",
+  "files": [
+    {
+      "file": "bungeecord.jar",
+      "mode": 493
+    }
+  ]
+}
+```
 
 ### Responses
 
@@ -176,7 +233,21 @@ Deletes files or folders on the server.
 | Name    | Visibility | Type          | Description                |
 | ------- | ---------- | ------------- | -------------------------- |
 | root    | Required   | string        | Root directory             |
-| files[] | Required   | array[string] | Files to delete (multiple) |
+| files[] | Required   | array[object] | Files to delete (multiple) |
+
+### Example Body
+
+```json
+{
+  "root": "/",
+  "files": [
+    {
+      "file": "bungeecord.jar",
+      "mode": 493
+    }
+  ]
+}
+```
 
 ### Responses
 
