@@ -171,7 +171,7 @@ Compresses files on the server.
 | Name    | Visibility | Type          | Description                    |
 | ------- | ---------- | ------------- | ------------------------------ |
 | root    | Required   | string        | Root directory for compression |
-| files[] | Required   | array[object] | Files to compress (multiple)   |
+| files[] | Required   | array[string] | Files to compress (multiple)   |
 
 ### Example Body
 
