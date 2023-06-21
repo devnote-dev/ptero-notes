@@ -194,7 +194,7 @@ Compresses files on the server.
 
 ### `POST /api/client/servers/:serverId/files/decompress`
 
-Decompresses files on the server.
+Decompresses a file on the server.
 
 ### Body
 
