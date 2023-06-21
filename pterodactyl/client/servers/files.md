@@ -182,7 +182,6 @@ Compresses files on the server.
     "bungeecord.jar",
     "config.yml"
   ]
-  ]
 }
 ```
 
@@ -261,8 +260,6 @@ Updates file permissions for file(s) on the server.
 | Code | Description              |
 | ---- | ------------------------ |
 | 204  | File permissions updated |
-
----
 
 ### `POST /api/client/servers/:serverId/files/pull`
 
