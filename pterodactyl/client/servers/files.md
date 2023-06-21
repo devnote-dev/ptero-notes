@@ -221,19 +221,6 @@ Deletes files or folders on the server.
 | root    | Required   | string        | Root directory             |
 | files[] | Required   | array[object] | Files to delete (multiple) |
 
-### Example Body
-
-```json
-{
-  "root": "/",
-  "files": [
-    {
-      "file": "bungeecord.jar",
-      "mode": 493
-    }
-  ]
-}
-```
 
 ### Responses
 
