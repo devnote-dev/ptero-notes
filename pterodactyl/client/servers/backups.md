@@ -49,10 +49,10 @@ Creates a new backup for a server.
 ### Body
 
 | Name      | Visibility | Type    | Description                               |
-| --------- | ---------- | ------- | ----------------------------------------- |
-| name      | Required   | string  | The name of the backup.                   |
-| ignored   | Optional   | string  | Ignored files                             |
-| is_locked | Optional   | boolean | Indicates if the backup should be locked. |
+| --------- | ---------- | ------- | -------------------------------------------- |
+| name      | Required   | string  | The name of the backup.                      |
+| ignored   | Optional   | string  | A list of ignored files separated by commas. |
+| is_locked | Optional   | boolean | Indicates if the backup should be locked.    |
 
 ### Response
 
