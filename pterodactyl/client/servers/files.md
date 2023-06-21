@@ -85,7 +85,7 @@ Generates a one-time token with a link that the user can use to download a given
 
 ### `PUT /api/client/servers/:serverId/files/rename`
 
-Renames a file on the remote machine.
+Renames one or more files on the remote machine.
 
 ### Body
 
