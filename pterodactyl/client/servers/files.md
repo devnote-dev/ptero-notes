@@ -101,8 +101,8 @@ Renames one or more files on the remote machine.
   "root": "/",
   "files": [
     {
-      "file": "bungeecord.jar",
-      "mode": 493
+      "from": "bungeecord.jar",
+      "to": "server.jar"
     }
   ]
 }
