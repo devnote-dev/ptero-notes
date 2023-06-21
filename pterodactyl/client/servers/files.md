@@ -198,10 +198,10 @@ Decompresses files on the server.
 
 ### Body
 
-| Name    | Visibility | Type          | Description                    |
-| ------- | ---------- | ------------- | ------------------------------ |
-| root    | Required   | string        | Root directory for compression |
-| files[] | Required   | array[object] | Files to decompress (multiple) |
+| Name | Visibility | Type   | Description                    |
+| ---- | ---------- | ------ | ------------------------------ |
+| root | Required   | string | Root directory for compression |
+| file | Required   | string | The file to decompress         |
 
 
 ### Responses
