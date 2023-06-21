@@ -219,7 +219,7 @@ Deletes files or folders on the server.
 | Name    | Visibility | Type          | Description                |
 | ------- | ---------- | ------------- | -------------------------- |
 | root    | Required   | string        | Root directory             |
-| files[] | Required   | array[object] | Files to delete (multiple) |
+| files[] | Required   | array[string] | Files to delete (multiple) |
 
 
 ### Responses
