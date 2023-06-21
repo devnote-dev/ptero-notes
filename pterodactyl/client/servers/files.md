@@ -203,19 +203,6 @@ Decompresses files on the server.
 | root    | Required   | string        | Root directory for compression |
 | files[] | Required   | array[object] | Files to decompress (multiple) |
 
-### Example Body
-
-```json
-{
-  "root": "/",
-  "files": [
-    {
-      "file": "bungeecord.jar",
-      "mode": 493
-    }
-  ]
-}
-```
 
 ### Responses
 
