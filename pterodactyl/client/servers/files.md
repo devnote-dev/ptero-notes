@@ -179,10 +179,9 @@ Compresses files on the server.
 {
   "root": "/",
   "files": [
-    {
-      "file": "bungeecord.jar",
-      "mode": 493
-    }
+    "bungeecord.jar",
+    "config.yml"
+  ]
   ]
 }
 ```
