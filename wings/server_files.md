@@ -150,10 +150,10 @@ Deletes one or more files from the server's volume. Note that if one of the file
 
 ### Body
 
-| Field | Visibility | Type   | Description                      |
-| ----- | ---------- | ------ | -------------------------------- |
-| files | required   | string | A list of file names.            |
-| root  | required   | string | The root directory of the files. |
+| Field | Visibility | Type            | Description                      |
+| ----- | ---------- | --------------- | -------------------------------- |
+| files | required   | array of string | A list of file names.            |
+| root  | required   | string          | The root directory of the files. |
 
 ### Responses
 
@@ -173,10 +173,10 @@ Compresses one or more files into a single archive in the server's volume, and r
 
 ### Body
 
-| Field | Visibility | Type   | Description                      |
-| ----- | ---------- | ------ | -------------------------------- |
-| files | required   | string | A list of file names.            |
-| root  | required   | string | The root directory of the files. |
+| Field | Visibility | Type            | Description                      |
+| ----- | ---------- | --------------- | -------------------------------- |
+| files | required   | array of string | A list of file names.            |
+| root  | required   | string          | The root directory of the files. |
 
 ### Responses
 
@@ -220,7 +220,7 @@ Changes the permissions of a file in the server's volume.
 
 | Field | Visibility | Type   | Description                      |
 | ----- | ---------- | ------ | -------------------------------- |
-| files | required   | string | A list of file-mode pairs.       |
+| files | required   | array | A list of file-mode pairs.       |
 | root  | required   | string | The root directory of the files. |
 
 ### Example Body
