@@ -17,7 +17,7 @@ Make sure to sign the token using the `token` value from the node configuration.
 
 | Field      | Type     | Description                                                                                                            |
 | ---------- | -------- | ---------------------------------------------------------------------------------------------------------------------- |
-| iss        | string   | The value for `remote` in config.json. This is the panel's url.                                                        |
+| iss        | string   | The value for `remote` in config.yml. This is the panel's url.                                                        |
 | aud        | string[] | An array containing a value of the the FQDN value, which is the Wings url.                                             |
 | unique_id  | string   | A random value. This can be anything.                                                                                  |
 | jti        | string   | MD5 encryption of either the value of `server_uuid` (in most cases) or `sub` (for `POST /api/servers/:uuid/transfer`). |
