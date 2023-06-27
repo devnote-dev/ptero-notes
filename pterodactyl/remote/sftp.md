@@ -8,10 +8,7 @@ Authenticate a set of credentials and return the associated server details for a
 | -------------- | ---------- | ------ | ------------------------------------------------------------------------------------------------- |
 | type           | optional   | string | Determine if the password should check authentication with either the "password" or "public_key". |
 | username       | required   | string | The username of the user attempting to login.                                                     |
-| password       | required   | string | The password of the user attempting to login.                                                     |
-| ip             | optional   | string | The remote address of the connection.                                                             |
-| session_id     | optional   | []byte | The connection's session id.                                                                      |
-| client_version | optional   | []byte | The connection's client version.                                                                  |
+| password       | required   | string | The password of the user attempting to login.                                    
 
 ### Responses
 
