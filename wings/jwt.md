@@ -26,7 +26,7 @@ Don't forget that most tokens require `server_uuid` in the JWT as well with the 
 
 ### Example JWT payload
 
-[This JWT comes from `GET /download/file`.](https://github.com/devnote-dev/ptero-notes/blob/8f8c6ae86d6c3445faf68d5e55f60953daac4bb0/wings/public.md#get-downloadfile)
+This JWT comes from [`GET /download/file`.](https://github.com/devnote-dev/ptero-notes/blob/8f8c6ae86d6c3445faf68d5e55f60953daac4bb0/wings/public.md#get-downloadfile)
 
 Example JWT value: `eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImp0aSI6IjFhMjM0NTY3ODliMGNkZTEyM2Y0NTZnNzhoOTAxMjM0In0.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xIiwiYXVkIjpbImh0dHA6Ly8xMjcuMC4wLjE6ODA4MCJdLCJqdGkiOiIxYTIzNDU2Nzg5YjBjZGUxMjNmNDU2Zzc4aDkwMTIzNCIsImlhdCI6MTY4Njc5NzQzNCwibmJmIjoxNjg2Nzk3MTM0LCJleHAiOjE2ODY3OTgzMzQsImZpbGVfcGF0aCI6Ii9zZXJ2ZXIucHJvcGVydGllcyIsInNlcnZlcl91dWlkIjoiMTIzNGE1NjctODliMC0xY2QyLTM0NTYtNzg5MGVmMTIzNDVnIiwidXNlcl91dWlkIjoiMWEyYmMzNGQtNTY3ZS04ZjkwLWcxaGktMjM0ajU2a2w3OG1uIiwidXNlcl9pZCI6MSwidW5pcXVlX2lkIjoiQ3lwZmZMcDB3RTBXdjAwNCJ9.zQkWBDuk05cuKZlmE5mfCdJSCZ4TY48siRFXZYLkpjY`
 
