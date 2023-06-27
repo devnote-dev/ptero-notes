@@ -17,9 +17,6 @@ Returns the required presigned urls to upload a backup to S3 cloud storage.
 | 404  | The backup was not found.                                      |
 | 409  | The backup is already in completed state.                      |
 
-### Response examples
-
-WIP.
 
 Sources
 
