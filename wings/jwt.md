@@ -1,4 +1,4 @@
-# Wings API - JWT specifications
+# JWT specifications
 
 This page lists the JWT specifications for Wings API.
 
