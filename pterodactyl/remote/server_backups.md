@@ -22,7 +22,6 @@ Sources
 
 - [app/Http/Controllers/Api/Remote/Backups/BackupRemoteUpl2oadController.php#L33](https://github.com/pterodactyl/panel/blob/v1.11.3/app/Http/Controllers/Api/Remote/Backups/BackupRemoteUploadController.php#L33)
 
----
 
 ### `POST /api/remote/backups/:backup`
 
