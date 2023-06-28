@@ -34,7 +34,7 @@ Handles updating the state of a backup.
 | data.checksum            | required if success is true | string  | The checksum.                                                                                          |
 | data.checksum_type       | required if success is true | string  | The checksum type.                                                                                     |
 | data.size                | required if success is true | number  | The size of the backup.                                                                                |
-| data.parts               | optional                    | array   | An array containing the etag and part_number.                                                          |
+| data.parts               | optional                    | array   | An array containing the etag and part number for each part.                                            |
 | data.parts[].etag        | required                    | string  | ???                                                                                                    |
 | data.parts[].part_number | required                    | number  | ???                                                                                                    |
 
