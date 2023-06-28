@@ -17,11 +17,9 @@ Returns the required presigned urls to upload a backup to S3 cloud storage.
 | 404  | The backup was not found.                                      |
 | 409  | The backup is already in completed state.                      |
 
-
 Sources
 
 - [app/Http/Controllers/Api/Remote/Backups/BackupRemoteUpl2oadController.php#L33](https://github.com/pterodactyl/panel/blob/v1.11.3/app/Http/Controllers/Api/Remote/Backups/BackupRemoteUploadController.php#L33)
-
 
 ### `POST /api/remote/backups/:backup`
 
@@ -29,9 +27,16 @@ Handles updating the state of a backup.
 
 ### Body
 
-| Name  | Visibility | Type   | Description                                                                                            |
-| ----- | ---------- | ------ | ------------------------------------------------------------------------------------------------------ |
-| data  | required   | object | An object containing the checksum, checksum type, backup size, success state, and parts of the backup. |
+| Name                     | Visibility                  | Type    | Description                                                                                            |
+| ------------------------ | --------------------------- | ------- | ------------------------------------------------------------------------------------------------------ |
+| data                     | required                    | object  | An object containing the checksum, checksum type, backup size, success state, and parts of the backup. |
+| data.successful          | required                    | boolean | The success state of the backup.                                                                       |
+| data.checksum            | required if success is true | string  | The checksum.                                                                                          |
+| data.checksum_type       | required if success is true | string  | The checksum type.                                                                                     |
+| data.size                | required if success is true | number  | The size of the backup.                                                                                |
+| data.parts               | optional                    | array   | An array containing the etag and part_number.                                                          |
+| data.parts[].etag        | required                    | string  | ???                                                                                                    |
+| data.parts[].part_number | required                    | number  | ???                                                                                                    |
 
 ### Example Body
 
