@@ -4,9 +4,9 @@ Returns the required presigned urls to upload a backup to S3 cloud storage.
 
 ### Parameters
 
-| Name      | Visibility | Description                        |
-| --------- | ---------- | ---------------------------------- |
-| size      | required   | The backup file size.              |
+| Name | Visibility | Description           |
+| ---- | ---------- | --------------------- |
+| size | required   | The backup file size. |
 
 ### Responses
 

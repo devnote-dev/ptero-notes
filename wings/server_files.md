@@ -220,7 +220,7 @@ Changes the permissions of a file in the server's volume.
 
 | Field | Visibility | Type   | Description                      |
 | ----- | ---------- | ------ | -------------------------------- |
-| files | required   | array | A list of file-mode pairs.       |
+| files | required   | array  | A list of file-mode pairs.       |
 | root  | required   | string | The root directory of the files. |
 
 ### Example Body

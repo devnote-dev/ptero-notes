@@ -48,14 +48,10 @@ Returns information about a specific subuser associated with a server.
     "uuid": "60a7aec3-e17d-4aa9-abb3-56d944d204b4",
     "username": "subuser2jvc",
     "email": "subuser2@example.com",
-    "image": "https:\/\/gravatar.com\/avatar\/3bb1c751a8b3488f4a4c70eddfe898d8",
+    "image": "https://gravatar.com/avatar/3bb1c751a8b3488f4a4c70eddfe898d8",
     "2fa_enabled": false,
     "created_at": "2020-06-12T23:31:41+01:00",
-    "permissions": [
-      "control.console",
-      "control.start",
-      "websocket.connect"
-    ]
+    "permissions": ["control.console", "control.start", "websocket.connect"]
   }
 }
 ```

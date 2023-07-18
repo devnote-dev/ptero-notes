@@ -252,9 +252,9 @@ Updates a given task for a server.
 
 ### Responses
 
-| Code | Description               |
-| ---- | ------------------------- |
-| 200  | Updated task for schedule |
+| Code | Description                                          |
+| ---- | ---------------------------------------------------- |
+| 200  | Updated task for schedule                            |
 | 403  | Task not found or server's backup limit is set to 0. |
 
 ### Example Response
@@ -290,7 +290,7 @@ Deletes a given task for a schedule. If there are subsequent tasks stored in the
 
 #### Responses
 
-| Code | Description  |
-| ---- | ------------ |
-| 204  | Task deleted |
+| Code | Description                     |
+| ---- | ------------------------------- |
+| 204  | Task deleted                    |
 | 403  | Task not found or no permission |

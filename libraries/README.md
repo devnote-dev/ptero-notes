@@ -21,7 +21,5 @@ Below is a list of curated API wrappers and libraries for Pterodactyl maintained
 | Application | users, servers, nodes                                                          | locations, nests, eggs                                                                                                              |
 | Client      | account (2FA, email & password, API keys), servers (resources, command, power) | account (activity, SSH keys), servers (activity), databases, files schedules, network, users (subusers), backups, startup, settings |
 | Websocket   | connect, heartbeat, receive events                                             | send events                                                                                                                         |
-| Remote*     | none                                                                           | activity logs, sftp (authentication), servers (list, reset state), transfers (transfer state), backups (backup state)               |
-| Wings*      | node configuration (system information, update configuration), servers         | files, backups, transfers, websocket (generate JWT)                                                                                 |
-
-\* These scopes should never be touched, unless you know what you're doing.
+| Remote      | none                                                                           | activity logs, sftp (authentication), servers (list, reset state), transfers (transfer state), backups (backup state)               |
+| Wings       | node configuration (system information, update configuration), servers         | files, backups, transfers, websocket (generate JWT)                                                                                 |

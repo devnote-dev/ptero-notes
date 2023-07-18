@@ -4,9 +4,9 @@ Returns all the databases that belong to the given server.
 
 ### Responses
 
-| Code | Description                     |
-| ---- | ------------------------------- |
-| 200  | List of databases               |
+| Code | Description       |
+| ---- | ----------------- |
+| 200  | List of databases |
 
 ### Example Response
 
@@ -27,7 +27,7 @@ Returns all the databases that belong to the given server.
         "connections_from": "%",
         "max_connections": 0
       }
-    },
+    }
   ]
 }
 ```
@@ -45,9 +45,9 @@ Creates a new database for the given server and return it.
 
 ### Responses
 
-| Code | Description                     |
-| ---- | ------------------------------- |
-| 200  | Created database                |
+| Code | Description      |
+| ---- | ---------------- |
+| 200  | Created database |
 
 ### Example Response
 
@@ -82,9 +82,9 @@ Rotates the password on a database instance. If the user does not have the `view
 
 ### Responses
 
-| Code | Description                     |
-| ---- | ------------------------------- |
-| 200  | Password rotated                |
+| Code | Description      |
+| ---- | ---------------- |
+| 200  | Password rotated |
 
 ### Example Response
 
@@ -119,7 +119,6 @@ Removes a specified database from the server.
 
 ### Responses
 
-| Code | Description                     |
-| ---- | ------------------------------- |
-| 204  | Database deleted                |
-
+| Code | Description      |
+| ---- | ---------------- |
+| 204  | Database deleted |

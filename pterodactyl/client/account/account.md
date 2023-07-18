@@ -24,16 +24,17 @@ Retrieves the account details of the authenticated user.
   }
 }
 ```
+
 ### `GET /api/client/account/two-factor`
 
 Returns a TOTP QR code, which can be used to set up two-factor authentication for a user's account.
 
 ### Responses
 
-| Code | Description                                |
-| ---- | ------------------------------------------ |
-| 200  | The request was successful                 |
-| 400  | Two factor already enabled                 |
+| Code | Description                |
+| ---- | -------------------------- |
+| 200  | The request was successful |
+| 400  | Two factor already enabled |
 
 ### Example Response
 
@@ -109,8 +110,8 @@ Updates the authenticated user's email address.
 
 ### Body
 
-| Name     | Visibility | Type     | Description                |
-| -------- | ---------- | -------- | -------------------------- |
+| Name     | Visibility | Type   | Description                |
+| -------- | ---------- | ------ | -------------------------- |
 | email    | Required   | string | The new email address.     |
 | password | Required   | string | The current user password. |
 
@@ -127,11 +128,11 @@ Updates the authenticated user's password.
 
 ### Body
 
-| Name                  | Visibility | Type     | Description                           |
-| --------------------- | ---------- | -------- | ------------------------------------- |
-| current_password      | Required   | string   | The current user password.            |
-| password              | Required   | string   | The new password.                     |
-| password_confirmation | Required   | string   | The confirmation of the new password. |
+| Name                  | Visibility | Type   | Description                           |
+| --------------------- | ---------- | ------ | ------------------------------------- |
+| current_password      | Required   | string | The current user password.            |
+| password              | Required   | string | The new password.                     |
+| password_confirmation | Required   | string | The confirmation of the new password. |
 
 #### Responses
 
@@ -145,49 +146,49 @@ Returns a paginated set of the user's activity logs.
 
 ### Query Parameters
 
-| Name      | Visibility | Type    | Description                             |
-| --------- | ---------- | ------  | -------------------------------------   |
-| per_page  | Optional   | integer | Number of activity logs per page        |
-| filter    | Optional   | string  | Filter activity logs by event (partial) |
-| sort      | Optional   | string  | Sort activity logs by timestamp         |
+| Name     | Visibility | Type    | Description                             |
+| -------- | ---------- | ------- | --------------------------------------- |
+| per_page | Optional   | integer | Number of activity logs per page        |
+| filter   | Optional   | string  | Filter activity logs by event (partial) |
+| sort     | Optional   | string  | Sort activity logs by timestamp         |
 
 ### Responses
 
-| Code | Description                      |
-| ---- | -------------------------------- |
-| 200  | The request was successful.      |
+| Code | Description                 |
+| ---- | --------------------------- |
+| 200  | The request was successful. |
 
 ### Example Response
 
 ```json
 {
-    "data": [
-        {
-            "id": "7f5a04394d5a7c6a8e4917d3d5a0a4f92d89f819",
-            "batch": "2023-06-10 09:25:17",
-            "event": "user.account.password_reset",
-            "is_api": false,
-            "ip": "127.0.0.1",
-            "description": "User requested a password reset",
-            "properties": {
-                "email": "john@example.com",
-                "count": 1
-            },
-            "has_additional_metadata": false,
-            "timestamp": "2023-06-10T09:25:17+00:00"
-        },
-        {
-            "id": "eaf4397b9c47b61483f5e72a3077d11f739c6059",
-            "batch": "2023-06-09 14:02:58",
-            "event": "user.account.update",
-            "is_api": false,
-            "ip": null,
-            "description": "User updated their account",
-            "properties": {},
-            "has_additional_metadata": false,
-            "timestamp": "2023-06-09T14:02:58+00:00"
-        }
-    ]
+  "data": [
+    {
+      "id": "7f5a04394d5a7c6a8e4917d3d5a0a4f92d89f819",
+      "batch": "2023-06-10 09:25:17",
+      "event": "user.account.password_reset",
+      "is_api": false,
+      "ip": "127.0.0.1",
+      "description": "User requested a password reset",
+      "properties": {
+        "email": "john@example.com",
+        "count": 1
+      },
+      "has_additional_metadata": false,
+      "timestamp": "2023-06-10T09:25:17+00:00"
+    },
+    {
+      "id": "eaf4397b9c47b61483f5e72a3077d11f739c6059",
+      "batch": "2023-06-09 14:02:58",
+      "event": "user.account.update",
+      "is_api": false,
+      "ip": null,
+      "description": "User updated their account",
+      "properties": {},
+      "has_additional_metadata": false,
+      "timestamp": "2023-06-09T14:02:58+00:00"
+    }
+  ]
 }
 ```
 
@@ -220,10 +221,10 @@ Creates a new SSH key for the authenticated user.
 
 ### Body
 
-| Name       | Visibility | Type     | Description              |
-| ---------- | ---------- | -------- | ------------------------ |
-| name       | Required   | string   | The name of the SSH key. |
-| public_key | Required   | string   | The public key contents. |
+| Name       | Visibility | Type   | Description              |
+| ---------- | ---------- | ------ | ------------------------ |
+| name       | Required   | string | The name of the SSH key. |
+| public_key | Required   | string | The public key contents. |
 
 ### Responses
 
@@ -280,10 +281,10 @@ Creates a new API key for the authenticated user.
 
 ### Body
 
-| Name        | Visibility | Type     | Description                                                         |
-| ----------- | ---------- | -------- | ------------------------------------------------------------------- |
-| description | Optional   | string   | A description for the API key.                                      |
-| allowed_ips | Optional   | array    | An array of IP addresses or CIDR ranges allowed to use the API key. |
+| Name        | Visibility | Type   | Description                                                         |
+| ----------- | ---------- | ------ | ------------------------------------------------------------------- |
+| description | Optional   | string | A description for the API key.                                      |
+| allowed_ips | Optional   | array  | An array of IP addresses or CIDR ranges allowed to use the API key. |
 
 ### Responses
 
@@ -307,4 +308,3 @@ Deletes a specific API key from the user's account.
 | Code | Description                           |
 | ---- | ------------------------------------- |
 | 204  | The API key was deleted successfully. |
-

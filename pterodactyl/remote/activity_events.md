@@ -2,7 +2,7 @@
 
 Here are a list of activity events, which are used in the audit log feature.
 
-```text
+```
 server.backup.restore-failed
 server:allocation.create
 server:allocation.delete
@@ -60,6 +60,4 @@ server:subuser.update
 server:task.create
 server:task.delete
 server:task.update
-
-* If there are any missing events, feel free to open a pull request.
 ```

@@ -178,10 +178,7 @@ Compresses files on the server.
 ```json
 {
   "root": "/",
-  "files": [
-    "bungeecord.jar",
-    "config.yml"
-  ]
+  "files": ["bungeecord.jar", "config.yml"]
 }
 ```
 
@@ -202,7 +199,6 @@ Decompresses a file on the server.
 | root | Required   | string | Root directory for compression |
 | file | Required   | string | The file to decompress         |
 
-
 ### Responses
 
 | Code | Description        |
@@ -219,7 +215,6 @@ Deletes files or folders on the server.
 | ------- | ---------- | ------------- | -------------------------- |
 | root    | Required   | string        | Root directory             |
 | files[] | Required   | array[string] | Files to delete (multiple) |
-
 
 ### Responses
 

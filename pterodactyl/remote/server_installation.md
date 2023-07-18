@@ -53,9 +53,7 @@ Returns details about the server that allows Wings to self-recover and ensure th
         "port": 25565
       },
       "mappings": {
-        "127.0.0.1": [
-          25565
-        ]
+        "127.0.0.1": [25565]
       }
     },
     "mounts": [],
@@ -66,9 +64,7 @@ Returns details about the server that allows Wings to self-recover and ensure th
   },
   "process_configuration": {
     "startup": {
-      "done": [
-        ")! For help, type "
-      ],
+      "done": [")! For help, type "],
       "user_interaction": [],
       "strip_ansi": false
     },

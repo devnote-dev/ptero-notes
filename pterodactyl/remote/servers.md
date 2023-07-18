@@ -4,10 +4,10 @@ Lists all servers with their configurations that are assigned to the requesting 
 
 ### Parameters
 
-| Name      | Visibility | Description                    |
-| --------- | ---------- | ------------------------------ |
-| page      | optional   | The page to list.              |
-| per_page  | optional   | The amount of servers to list. |
+| Name     | Visibility | Description                    |
+| -------- | ---------- | ------------------------------ |
+| page     | optional   | The page to list.              |
+| per_page | optional   | The amount of servers to list. |
 
 ### Responses
 
@@ -62,9 +62,7 @@ Lists all servers with their configurations that are assigned to the requesting 
             "port": 25565
           },
           "mappings": {
-            "192.168.228.1": [
-              25565
-            ]
+            "192.168.228.1": [25565]
           }
         },
         "mounts": [],
@@ -75,9 +73,7 @@ Lists all servers with their configurations that are assigned to the requesting 
       },
       "process_configuration": {
         "startup": {
-          "done": [
-            ")! For help, type "
-          ],
+          "done": [")! For help, type "],
           "user_interaction": [],
           "strip_ansi": false
         },
@@ -179,9 +175,9 @@ Sources
 
 ### Body
 
-| Name  | Visibility | Type   | Description                                  |
-| ----- | ---------- | ------ | -------------------------------------------- |
-| data  | required   | array  | An array with all server activity data.      |
+| Name | Visibility | Type  | Description                             |
+| ---- | ---------- | ----- | --------------------------------------- |
+| data | required   | array | An array with all server activity data. |
 
 ### Example Body
 
@@ -193,7 +189,7 @@ Sources
       "event": "server:sftp.write",
       "timestamp": "1968-01-01T00:00:00.000000000Z",
       "metadata": {
-        "files": [ "/fake.log" ],
+        "files": ["/fake.log"]
       },
       "ip": "0.0.0.0",
       "user": "abcde1fg-2345-6789-012h-ij34kl5m6789"
@@ -209,10 +205,10 @@ Sources
 
 ### Responses
 
-| Code | Description                                      |
-| ---- | ------------------------------------------------ |
-| 200  | The response was successful. (no request body)   |
-| 422  | Incorrect field data.                            |
+| Code | Description                                    |
+| ---- | ---------------------------------------------- |
+| 200  | The response was successful. (no request body) |
+| 422  | Incorrect field data.                          |
 
 Sources
 

@@ -122,10 +122,9 @@ Returns all the subuser permissions available on the system.
           "update": "Allows a user to modify other subusers.",
           "delete": "Allows a user to delete a subuser from the server."
         }
-      },
+      }
       // ... (other permissions)
     }
   }
 }
-
 ```
