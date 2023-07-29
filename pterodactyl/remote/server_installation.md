@@ -117,11 +117,9 @@ Returns installation information for a server.
 
 ```json
 {
-  "body": {
-    "container_image": "openjdk:8-jdk-slim",
-    "entrypoint": "bash",
-    "script": "# Installation script here"
-  }
+  "container_image": "openjdk:8-jdk-slim",
+  "entrypoint": "bash",
+  "script": "# Installation script here"
 }
 ```
 
