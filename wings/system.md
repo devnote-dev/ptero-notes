@@ -40,7 +40,7 @@ Returns the system information for the host that Wings is running on.
 
 ### Example(s):
 
-`/api/system`
+`Version 1 | /api/system`
 
 ```json
 {
@@ -52,7 +52,7 @@ Returns the system information for the host that Wings is running on.
 }
 ```
 
-`/api/system?v=2`
+`Version 2 | /api/system?v=2`
 ```json
 {
     "version": "1.11.7",
