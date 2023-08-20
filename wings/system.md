@@ -38,6 +38,55 @@ Returns the system information for the host that Wings is running on.
 | ---- | ---------- | ----------------------------------------------------------------------------------- |
 | v    | optional   | Determines which format of the configuration to return (only accepts value of "2"). |
 
+### Example(s):
+
+`Version 1 | /api/system`
+
+```json
+{
+    "architecture": "amd64",
+    "cpu_count": 24,
+    "kernel_version": "5.10.0-23-amd64",
+    "os": "linux",
+    "version": "1.11.7"
+}
+```
+
+`Version 2 | /api/system?v=2`
+```json
+{
+    "version": "1.11.7",
+    "docker": {
+        "version": "24.0.2",
+        "cgroups": {
+            "driver": "systemd",
+            "version": "2"
+        },
+        "containers": {
+            "total": 485,
+            "running": 58,
+            "paused": 0,
+            "stopped": 427
+        },
+        "storage": {
+            "driver": "overlay2",
+            "filesystem": "extfs"
+        },
+        "runc": {
+            "version": "v1.1.7-0-g860f061"
+        }
+    },
+    "system": {
+        "architecture": "amd64",
+        "cpu_threads": 24,
+        "memory_bytes": 33691893760,
+        "kernel_version": "5.10.0-23-amd64",
+        "os": "Debian GNU/Linux 11 (bullseye)",
+        "os_type": "linux"
+    }
+}
+```
+
 ### Responses
 
 | Code | Description                                  |
