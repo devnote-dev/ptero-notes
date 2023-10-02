@@ -24,7 +24,7 @@ Endpoints must start off with the HTTP method and the full endpoint path in a le
 
 If the endpoint accepts a request body, it's body structure must be documented accordingly. Endpoints that accept a JSON body must be formatted using a [Parameter Table](#parameter-table), otherwise a paragraph detailing the request body format may be used.
 
-If the endpoint can return multiple unique responses, a [Status Code Table](#status-code-table) must be used summarising the cause of the response. Note that this does apply for broad covering statuses like 401 (unauthorized) and 403 (forbidden) unless there is a special case for that endpoint.
+If the endpoint can return multiple unique responses, a [Status Code Table](#status-code-table) must be used summarising the cause of the response. Note that this does apply for broad covering statuses like 401 (unauthorized) and 403 (forbidden) unless there is a special case for that endpoint. If the endpoint response also contains a body, an example of the response body must also be included following the status code table under an "Example Response" heading.
 
 Sources that the endpoint information is derived from must be included as an ordered list of hyperlinks below the "Sources" heading, using the file name and line hash as the hyperlink name. Source URLs must be **permanent links** to prevent continuous resource changes unless sucha change is warranted by the upstream source (which would be the panel and Wings repositories).
 
