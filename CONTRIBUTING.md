@@ -56,6 +56,28 @@ Updates a user by its `id`. Note that this is the numeric ID, not the string ide
 | 400  | The request body could not be decoded. |
 | 422  | One or more validation rules failed.   |
 
+### Example Response
+
+```json
+{
+  "object": "user",
+  "attributes": {
+    "2fa": true,
+    "created_at": "2023-08-16T00:08:04+00:00",
+    "email": "sudowoodo@example.com",
+    "external_id": null,
+    "first_name": "sudo",
+    "id": 5,
+    "language": "en",
+    "last_name": "woodo",
+    "root_admin": true,
+    "updated_at": "2023-06-14T00:14:11+00:00",
+    "username": "sudowoodo",
+    "uuid": "31ba4cba-cbfb-472a-a688-701e2d91444f"
+  }
+}
+```
+
 ### Sources
 
 - [UpdateUserRequest.php#L7](https://github.com/pterodactyl/panel/blob/9b35a55eea1ddff8a4f4c0232096bf761c74322f/app/Http/Requests/Api/Application/Users/UpdateUserRequest.php#L7)
