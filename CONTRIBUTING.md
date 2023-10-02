@@ -2,11 +2,11 @@
 
 ### Contents
 
-* [Document Hierarchy](#document-hierarchy)
-* [Document Structure](#document-structure)
-* * [Endpoints](#endpoints)
-* * [Example Structure](#example-structure)
-* [Components](#components)
+- [Document Hierarchy](#document-hierarchy)
+- [Document Structure](#document-structure)
+- - [Endpoints](#endpoints)
+- - [Example Structure](#example-structure)
+- [Components](#components)
 
 ## Document Hierarchy
 
@@ -30,7 +30,7 @@ Sources that the endpoint information is derived from must be included as an ord
 
 ### Example Structure
 
-```markdown
+````markdown
 ## `PATCH /api/application/users/:id`
 
 Updates a user by its `id`. Note that this is the numeric ID, not the string identifier or external identifier.
@@ -82,7 +82,7 @@ Updates a user by its `id`. Note that this is the numeric ID, not the string ide
 
 - [UpdateUserRequest.php#L7](https://github.com/pterodactyl/panel/blob/9b35a55eea1ddff8a4f4c0232096bf761c74322f/app/Http/Requests/Api/Application/Users/UpdateUserRequest.php#L7)
 - [UserController.php#L99](https://github.com/pterodactyl/panel/blob/9b35a55eea1ddff8a4f4c0232096bf761c74322f/app/Http/Controllers/Api/Application/Users/UserController.php#L99)
-```
+````
 
 ## Components
 
