@@ -7,6 +7,10 @@
 - - [Endpoints](#endpoints)
 - - [Example Structure](#example-structure)
 - [Components](#components)
+- - [Parameter Table](#parameter-table)
+- - [Status Code Table](#status-code-table)
+- - [Note Blockquote](#note-blockquote)
+- - [Warning Blockquote](#warning-blockquote)
 
 ## Document Hierarchy
 
