@@ -20,7 +20,7 @@ Supplementary information scoping the endpoints in the document may be specified
 
 ### Endpoints
 
-Endpoints must start off with the HTTP method and the full endpoint path in a level 2 heading, wrapped with backticks. Path parameters must be prefixed with a colon followed by an identifier for the parameter. Below the heading a description of the endpoint should be provided, keeping to a short and concise paragraph where possible. Endpoints with extensive functionality must be documented accordingly.
+Endpoints must start off with the HTTP method and the full endpoint path in a level 2 heading, wrapped with backticks. Path parameters must be prefixed with a colon followed by an identifier for the parameter. Below the heading a description of the endpoint should be provided, keeping to a short and concise paragraph where possible. Endpoints with extensive functionality must be documented accordingly and formatted in appropriate paragraphs. Backticks must be used when referencing object/resource fields or identifiers. Information that is not necessarily required for the endpoint but is relevant and useful to it may be included as a [Note Blockquote](#note-blockquote). Information that is critical about the endpoint or its usage must be highlighted in bold text or included as a [Warning Blockquote](#warning-blockquote).
 
 If the endpoint accepts a request body, it's body structure must be documented accordingly. Endpoints that accept a JSON body must be formatted using a [Parameter Table](#parameter-table), otherwise a paragraph detailing the request body format may be used.
 
@@ -119,3 +119,27 @@ Status Code tables are a short and simple way to summarise the state of specific
 | Code     | Description                            |
 | -------- | -------------------------------------- |
 | the code | A summary of the reason for that code. |
+
+### Note Blockquote
+
+A note blockquote is quite simply, a blockquote containing information that should be taken note of pertaining to the resource it is used in. Some markdown renderers and websites (namely GitHub) support Note blockquotes as a specific block style separate to normal blockquotes.
+
+> **Note**
+> Note description goes here.
+
+```
+> **Note**
+> Note description goes here.
+```
+
+### Warning Blockquote
+
+A warning blockquote is a blockquote containing information that is critical to the resource it is used in. They should accurately highlight the information including any relevant references or source links. Like Note blockquotes, some markdown renderers and websites (namely GitHub) support Warning blockquotes as a specific block style separate to normal blockquotes.
+
+> **Warning**
+> Warning description goes here.
+
+```
+> **Warning**
+> Warning description goes here.
+```
