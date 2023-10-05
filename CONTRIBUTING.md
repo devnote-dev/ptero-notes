@@ -11,6 +11,7 @@ This guide covers the specifications for structuring and documenting endpoints a
 - [Components](#components)
 - - [Parameter Table](#parameter-table)
 - - [Status Code Table](#status-code-table)
+- - [Important Blockquote](#important-blockquote)
 - - [Note Blockquote](#note-blockquote)
 - - [Warning Blockquote](#warning-blockquote)
 
@@ -123,6 +124,18 @@ Status Code tables are a short and simple way to summarise the state of specific
 | Code     | Description                            |
 | -------- | -------------------------------------- |
 | the code | A summary of the reason for that code. |
+
+### Important Blockquote
+
+An important blockquote is a blockquote containing important information that requires highlighting or distinction from a paragraph. This is ideal for long texts of information that would otherwise not fit well as a bolded paragraph. Some markdown renderers and websites (namely GitHub) support Important blockquotes as a specific block style separate to normal blockquotes.
+
+> **Important**
+> Important information goes here.
+
+```
+> **Information**
+> Important information goes here.
+```
 
 ### Note Blockquote
 
