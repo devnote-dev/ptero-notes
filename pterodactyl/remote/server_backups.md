@@ -35,8 +35,8 @@ Handles updating the state of a backup.
 | data.checksum_type       | required if success is true | string  | The checksum type.                                                                                     |
 | data.size                | required if success is true | number  | The size of the backup.                                                                                |
 | data.parts               | optional                    | array   | An array containing the etag and part number for each part.                                            |
-| data.parts[].etag        | required                    | string  | ???                                                                                                    |
-| data.parts[].part_number | required                    | number  | ???                                                                                                    |
+| data.parts[].etag        | required                    | string  | The entity tag of an upload part. (for S3)                                                             |
+| data.parts[].part_number | required                    | number  | The part number of an upload part. (for S3)                                                            |
 
 ### Example Body
 
