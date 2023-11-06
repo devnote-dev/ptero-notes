@@ -7,6 +7,7 @@ This guide covers the specifications for structuring and documenting endpoints a
 - [Document Hierarchy](#document-hierarchy)
 - [Document Structure](#document-structure)
 - - [Endpoints](#endpoints)
+- - [Semantic Structure](#semantic-structure)
 - - [Example Structure](#example-structure)
 - [Components](#components)
 - - [Parameter Table](#parameter-table)
