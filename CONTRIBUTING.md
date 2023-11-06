@@ -25,7 +25,7 @@ Supplementary information scoping the endpoints in the document may be specified
 
 ### Endpoints
 
-Endpoints must start off with the HTTP method and the full endpoint path in a level 2 heading, wrapped with backticks. Path parameters must be prefixed with a colon followed by an identifier for the parameter. Below the heading a description of the endpoint should be provided, keeping to a short and concise paragraph where possible. Endpoints with extensive functionality must be documented accordingly and formatted in appropriate paragraphs. Backticks must be used when referencing object/resource fields or identifiers. Information that is not necessarily required for the endpoint but is relevant and useful to it may be included as a [Note Blockquote](#note-blockquote). Information that is critical about the endpoint or its usage must be highlighted in bold text or included as a [Warning Blockquote](#warning-blockquote).
+Endpoints must start off with a short title for the endpoint in a level 2 heading and the HTTP method with the full endpoint path in a level 3 heading, wrapped in backticks. Path parameters must be prefixed with a colon followed by an identifier for the parameter. Below the heading a description of the endpoint should be provided, keeping to a short and concise paragraph where possible. Endpoints with extensive functionality must be documented accordingly and formatted in appropriate paragraphs. Backticks must be used when referencing object/resource fields or identifiers. Information that is not necessarily required for the endpoint but is relevant and useful to it may be included as a [Note Blockquote](#note-blockquote). Information that is critical about the endpoint or its usage must be highlighted in bold text or included as a [Warning Blockquote](#warning-blockquote).
 
 If the endpoint accepts a request body, it's body structure must be documented accordingly. Endpoints that accept a JSON body must be formatted using a [Parameter Table](#parameter-table) including any composite object types which should have their own parameter tables defined below the request body parameter table. For non-JSON request bodies, a paragraph detailing the request body format may be used.
 
@@ -33,10 +33,52 @@ If the endpoint can return multiple unique responses, a [Status Code Table](#sta
 
 Sources that the endpoint information is derived from must be included as an ordered list of hyperlinks below the "Sources" heading, using the file name and line hash as the hyperlink name. Source URLs must be **permanent links** to prevent continuous resource changes unless sucha change is warranted by the upstream source (which would be the panel and Wings repositories).
 
+### Semantic Structure
+
+Fields in `<>` are required and fields in `[]` are optional.
+
+```
+## <endpoint-title>
+
+### <http-method> <endpoint-path>
+
+<endpoint-description>
+
+[
+  ### Parameters
+
+  <request-url parameters-table>
+]
+
+[
+  ### Body
+
+  <request-body parameter-table>
+
+  [request body composite objects parameter-tables]
+]
+
+### Responses
+
+<status-code-table>
+
+[
+  ### Example Response
+
+  <example-response-body>
+]
+
+### Sources
+
+<sources unordered-list>
+```
+
 ### Example Structure
 
 ````markdown
-## `PATCH /api/application/users/:id`
+## Update User
+
+### `PATCH /api/application/users/:id`
 
 Updates a user by its `id`. Note that this is the numeric ID, not the string identifier or external identifier.
 
