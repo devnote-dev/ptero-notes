@@ -68,7 +68,7 @@ Returns a list of user objects.
 
 ## Get User
 
-### `GET /users/:id`
+### `GET /api/application/users/:id`
 
 Returns a user by its `id` (number).
 
@@ -113,7 +113,7 @@ Returns a user by its `id` (number).
 
 ## Get External User
 
-### `GET /users/external/:external_id`
+### `GET /api/application/users/external/:external_id`
 
 Return a user by its `external_id` (string).
 
@@ -165,7 +165,7 @@ Creates a user.
 
 ## Update User
 
-### `PATCH /users/:id`
+### `PATCH /api/application/users/:id`
 
 Updates a user account by its `id` (number).
 
@@ -197,7 +197,7 @@ Updates a user account by its `id` (number).
 
 ## Delete User
 
-### `DELETE /users/:id`
+### `DELETE /api/application/users/:id`
 
 Deletes a user account by its `id` (number).
 
