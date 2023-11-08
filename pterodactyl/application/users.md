@@ -173,14 +173,14 @@ Updates a user account by its `id` (number).
 
 | Field       | Visibility | Type    | Description                                          |
 | ----------- | ---------- | ------- | ---------------------------------------------------- |
-| email       | optional   | string  | The account email.                                   |
+| email       | required   | string  | The account email.                                   |
 | external_id | optional   | string  | An external identifier for the account.              |
-| first_name  | optional   | string  | The first name for the account.                      |
+| first_name  | required   | string  | The first name for the account.                      |
 | language    | optional   | string  | The language identifier for the account.             |
-| last_name   | optional   | string  | The last name for the account.                       |
+| last_name   | required   | string  | The last name for the account.                       |
 | password    | optional   | string  | The password for the account.                        |
 | root_admin  | optional   | boolean | Whether the account will have administrative access. |
-| username    | optional   | string  | The account username.                                |
+| username    | required   | string  | The account username.                                |
 
 ### Responses
 
