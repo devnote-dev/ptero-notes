@@ -22,6 +22,14 @@ These are features/changes that have been confirmed to appear in future releases
 - https://github.com/pterodactyl/panel/pull/4869
 - https://github.com/pterodactyl/panel/pull/4866
 
+### API Access
+
+Application API keys have been deprecated in favour of client API keys which have access to application API endpoints for administrative accounts from version 1.8 or later. Eventually they will be removed entirely and client API keys will be reimplemented as "Access Tokens".
+
+### Admin-Application Endpoints
+
+The **admin** API which is used for the admin controls in the panel (not to be confused with the **application** API) will be integrated into the application API. This means that resources formerly only accessible via the admin web view will now be accessible externally through the use of an API key (e.g. managing mounts).
+
 ## Proposed
 
 These are features/changes that have been proposed on the GitHub repository and have relevant discussions in the issue or from the Discord server.
