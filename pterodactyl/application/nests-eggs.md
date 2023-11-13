@@ -1,4 +1,33 @@
-### Example Model (nests)
+## Contents
+
+- [Get Nests](#get-nests)
+- [Get Nest](#get-nest)
+- [Get Nest Eggs](#get-nest-eggs)
+- [Get Nest Egg](#get-nest-egg)
+
+---
+
+## Get Nests
+
+### `GET /nests`
+
+Returns a list of nest objects.
+
+### Parameters
+
+| Name     | Visibility | Type           | Allowed Values |
+| -------- | ---------- | -------------- | -------------- |
+| include  | optional   | array\[string] | eggs, servers  |
+| page     | optional   | number         | >= 1           |
+| per_page | optional   | number         | >= 1           |
+
+### Responses
+
+| Code | Description                 |
+| ---- | --------------------------- |
+| 200  | The request was successful. |
+
+### Example Response
 
 ```json
 {
@@ -12,25 +41,26 @@
 }
 ```
 
-### `GET /nests`
-
-Returns a list of nest objects.
-
-### Parameters
-
-| Name     | Supported | Allowed Values |
-| -------- | --------- | -------------- |
-| filter   | ❌        |
-| include  | ✅        | eggs, servers  |
-| sort     | ❌        |
-| page     | ✅        | Any number     |
-| per_page | ✅        | Any number     |
+## Get Nest
 
 ### `GET /nests/:id`
 
-Returns a nest by its `id` (number). Supports the above parameters.
+Returns a nest by its `id` (number).
 
-### Example Model (eggs)
+### Parameters
+
+| Name    | Visibility | Type           | Allowed Values |
+| ------- | ---------- | -------------- | -------------- |
+| include | optional   | array\[string] | eggs, servers  |
+
+### Responses
+
+| Code | Description                 |
+| ---- | --------------------------- |
+| 200  | The request was successful. |
+| 404  | The nest was not found.     |
+
+### Example Response
 
 ```json
 {
@@ -57,7 +87,7 @@ Returns a nest by its `id` (number). Supports the above parameters.
     "stop": "end"
   },
   "created_at": "2022-01-03T08:07:20+00:00",
-  "description": "For a long time, Minecraft server owners have had a dream that encompasses a free, easy, and reliable way to connect multiple Minecraft servers together. BungeeCord is the answer to said dream. Whether you are a small server wishing to string multiple game-modes together, or the owner of the ShotBow Network, BungeeCord is the ideal solution for you. With the help of BungeeCord, you will be able to unlock your community's full potential.",
+  "description": "...",
   "docker_image": "ghcr.io/pterodactyl/yolks:java_17",
   "docker_images": {
     "Java 11": "ghcr.io/pterodactyl/yolks:java_11",
@@ -81,20 +111,36 @@ Returns a nest by its `id` (number). Supports the above parameters.
 }
 ```
 
+## Get Nest Eggs
+
 ### `GET /nests/:id/eggs`
 
 Returns a list of eggs in the nest.
 
 ### Parameters
 
-| Name     | Supported | Allowed Values                           |
-| -------- | --------- | ---------------------------------------- |
-| filter   | ❌        |
-| include  | ✅        | config, nest, script, servers, variables |
-| sort     | ❌        |
-| page     | ✅        | Any number                               |
-| per_page | ✅        | Any number                               |
+| Name     | Visibility | Type           | Allowed Values                           |
+| -------- | ---------- | -------------- | ---------------------------------------- |
+| include  | optional   | array\[string] | config, nest, script, servers, variables |
+| page     | optional   | number         | >= 1                                     |
+| per_page | optional   | number         | >= 1                                     |
+
+### Responses
+
+| Code | Description                 |
+| ---- | --------------------------- |
+| 200  | The request was successful. |
+| 404  | The nest was not found.     |
+
+## Get Nest Egg
 
 ### `GET /nests/:id/eggs/:id`
 
-Returns an egg in a nest by its `id` (number). Supports the above parameters.
+Returns an egg in a nest by its `id` (number).
+
+### Responses
+
+| Code | Description                    |
+| ---- | ------------------------------ |
+| 200  | The request was successful.    |
+| 404  | The nest or egg was not found. |
