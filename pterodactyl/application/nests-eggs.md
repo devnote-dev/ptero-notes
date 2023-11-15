@@ -49,6 +49,10 @@ Returns a list of nest objects.
 }
 ```
 
+### Source
+
+- [NestController.php#L24](https://github.com/pterodactyl/panel/blob/8abf2d810666c360320cc25808167d08963bb9be/app/Http/Controllers/Api/Application/Nests/NestController.php#L24)
+
 ## Get Nest
 
 ### `GET /nests/:id`
@@ -84,6 +88,10 @@ Returns a nest by its `id` (number).
   }
 }
 ```
+
+### Sources
+
+- [NestController.php#L36](https://github.com/pterodactyl/panel/blob/8abf2d810666c360320cc25808167d08963bb9be/app/Http/Controllers/Api/Application/Nests/NestController.php#L36)
 
 ## Get Nest Eggs
 
@@ -165,6 +173,10 @@ Returns a list of eggs in the nest.
 }
 ```
 
+### Sources
+
+- [EggController.php#L17](https://github.com/pterodactyl/panel/blob/8abf2d810666c360320cc25808167d08963bb9be/app/Http/Controllers/Api/Application/Nests/EggController.php#L17)
+
 ## Get Nest Egg
 
 ### `GET /nests/:id/eggs/:id`
@@ -231,3 +243,7 @@ Returns an egg in a nest by its `id` (number).
   }
 }
 ```
+
+### Sources
+
+- [EggController.php#L27](https://github.com/pterodactyl/panel/blob/8abf2d810666c360320cc25808167d08963bb9be/app/Http/Controllers/Api/Application/Nests/EggController.php#L27)
