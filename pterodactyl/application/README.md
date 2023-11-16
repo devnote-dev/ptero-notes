@@ -2,6 +2,27 @@
 
 This API is for managing a lot of the administrative side of the panel, ranging from control over users, nodes, servers, eggs and more.
 
+## Contents
+
+- Locations
+- - [Get Locations](./locations.md#get-locations)
+- - [Get Location](./locations.md#get-location)
+- - [Create Location](./locations.md#create-location)
+- - [Update Location](./locations.md#update-location)
+- - [Delete Location](./locations.md#delete-location)
+- Nests and Eggs
+- - [Get Nests](./nests-eggs.md#get-nests)
+- - [Get Nest](./nests-eggs.md#get-nest)
+- - [Get Nest Eggs](./nests-eggs.md#get-nest-eggs)
+- - [Get Nest Egg](./nests-eggs.md#get-nest-egg)
+  <!-- TODO: Nodes -->
+- Users
+- - [Get Users](./users.md#get-users)
+- - [Get User](./users.md#get-user)
+- - [Create User](./users.md#create-user)
+- - [Update User](./users.md#update-user)
+- - [Delete User](./users.md#delete-user)
+
 ## Access
 
 > **Important**
