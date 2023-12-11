@@ -61,7 +61,7 @@ Websocket payloads will always have the event name, but the event arguments can 
 
 Websocket tokens can last upto 20 minutes, with a "token expiring" event sent around 5 minutes prior to closing. In order to keep the websocket connection open, a new token needs to be sent before the connection closes. This process is commonly called heartbeating, and can be done with these 2 steps:
 
-1. Request a new token from the panel ([websocket endpoint](/pterodactyl/client/servers.md#get-serversidentifierwebsocket))
+1. Request a new token from the panel ([websocket endpoint](/pterodactyl/client/servers/servers.md#get-serversidentifierwebsocket))
 2. Send an "auth" event with the new token
 
 It's advised to reauthenticate the connection when you recieve the "token expiring" warning event, as the connection is not always kept open for the full 20 minutes.
