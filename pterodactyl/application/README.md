@@ -25,7 +25,7 @@ This API is for managing a lot of the administrative side of the panel, ranging 
 
 ## Access
 
-> **Important**
+> [!WARNING]
 > The use of Application API keys are **deprecated**, you should use **client API keys** when accessing this API.
 
 The `Authorization` header must be present in requests and must be prefixed with "Bearer " followed by the key. Client API keys can be generated in the client side of the panel in the account tab. `Content-Type` and `Accept` headers are also required for `POST`, `PATCH`, `PUT` requests. Requests that require a body should be in the format of a **JSON string**, not a literal object. Sending a literal object in the body will cause unexpected errors.

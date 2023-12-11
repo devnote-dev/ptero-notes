@@ -263,7 +263,8 @@ Pulls a file from a remote location and downloads it into the server's volume. A
 
 ### Body
 
-> **Warning** The `directory` field in the request body is deprecated, use the `root` field instead.
+> [!WARNING]
+> The `directory` field in the request body is deprecated, use the `root` field instead.
 
 | Field      | Visibility | Type    | Description                                             |
 | ---------- | ---------- | ------- | ------------------------------------------------------- |

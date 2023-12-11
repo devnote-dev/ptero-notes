@@ -41,7 +41,7 @@ Returns a list of files in a given directory. If the directory is not provided, 
 
 Returns the contents of a specified file for the user.
 
-> **Note**
+> [!NOTE]
 > The content type of the response will always be in the `text/plain` format.
 
 ### Body
@@ -146,8 +146,7 @@ Writes the contents of the specified file to the server.
 | ---- | ---------- | ---------- | --------------------------------- |
 | -    | Required   | text/plain | Content of the file to be written |
 
-**Note**
-
+> [!NOTE]
 > The request body contains the content that will be written to the file. It can be provided in any format, although the `text/plain` format is commonly used.
 
 ### Example Body

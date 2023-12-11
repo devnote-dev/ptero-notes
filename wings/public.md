@@ -1,4 +1,5 @@
-> **Note** All of the endpoints listed in this document use custom authorization methods which are specified under each endpoint.
+> [!NOTE]
+> All of the endpoints listed in this document use custom authorization methods which are specified under each endpoint.
 
 ### `GET /download/backup`
 
@@ -73,7 +74,8 @@ Initializes a websocket connection to the specified server (see [websocket](/win
 
 ### `POST /api/transfers`
 
-> **Warning** this endpoint is only meant to be used by other Wings instances, and can be potentially damaging. The documentation for this endpoint is for learning purposes only.
+> [!CAUTION]
+> This endpoint is only meant to be used by other Wings instances, and can be potentially damaging. The documentation for this endpoint is for learning purposes only.
 
 Handles the incoming transfer request from another Wings instance (the source node). In summary, the process goes as follows:
 

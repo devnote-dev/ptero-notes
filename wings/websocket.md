@@ -6,7 +6,7 @@ Server websockets can provide a constant stream of information about the server 
 
 Make sure you have set the `allowed_origins` field in your Wings configuration to your Fully Qualified Domain Name (FQDN), IP address or `"*"` if you want to allow all origins. Alternatively, you can include the `Origin` header with your panel URL or an allowed origin when establishing the connection if the library you're using supports it.
 
-> **Warning**
+> [!IMPORTANT]
 > The `allowed_origins` field does not support pattern matching, meaning that you cannot allow all routes of a particular domain or IP dynamically (e.g. `192.168.1.*`).
 
 Once you have connected to the websocket you must authenticate it with the token received from the panel (see [events](#events)). If successful, you will recieve an "auth success" event.

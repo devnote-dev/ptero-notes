@@ -2,7 +2,7 @@
 
 The Wings API is used for communicating to the panel and other Wings instances on the panel.
 
-> **Note**
+> [!IMPORTANT]
 > The Wings API does not have any control over the literal server instances in the panel, only the Docker containers for said servers and the server volumes. Use the [application API](/pterodactyl/application/README.md) for server control.
 
 ## Access
