@@ -1,15 +1,15 @@
 ## Contents
 
-- [Get Nodes]
-- [Get Deployable Nodes]
-- [Get Node]
-- [Get Node Allocations]
-- [Create Node Allocation]
-- [Delete Node Allocation]
-- [Get Node Configuration]
-- [Create Node]
-- [Update Node]
-- [Delete Node]
+- [Get Nodes](#get-nodes)
+- [Get Deployable Nodes](#get-deployable-nodes)
+- [Get Node](#get-node)
+- [Get Node Allocations](#get-node-allocations)
+- [Create Node Allocation](#create-node)
+- [Delete Node Allocation](#delete-node-allocation)
+- [Get Node Configuration](#get-node-configuration)
+- [Create Node](#create-node)
+- [Update Node](#update-node)
+- [Delete Node](#delete-node)
 
 ---
 
@@ -218,6 +218,10 @@ Creates an allocation on the node.
 | 404  | The node was not found.              |
 | 429  | One or more validation rules failed. |
 
+### Sources
+
+- [AllocationController.php#L65](https://github.com/pterodactyl/panel/blob/8abf2d810666c360320cc25808167d08963bb9be/app/Http/Controllers/Api/Application/Nodes/AllocationController.php#L65)
+
 ## Delete Node Allocation
 
 ### `DELETE /api/application/nodes/:id/allocations/:id`
@@ -231,6 +235,10 @@ Deletes an allocation from the node by its `id` (number).
 | 204  | The request was successful.           |
 | 404  | The node or allocation was not found. |
 
+### Sources
+
+- [AllocationController.php#L77](https://github.com/pterodactyl/panel/blob/8abf2d810666c360320cc25808167d08963bb9be/app/Http/Controllers/Api/Application/Nodes/AllocationController.php#L77)
+
 ## Get Node Configuration
 
 ### `GET /nodes/:id/configuration`
@@ -239,75 +247,83 @@ Returns the configuration data of a specified node.
 
 ### Response
 
-| Code | Description                          |
-| ---- | ------------------------------------ |
-| 204  | The request was successful.          |
-| 404  | The node was not found.              |
+| Code | Description                 |
+| ---- | --------------------------- |
+| 204  | The request was successful. |
+| 404  | The node was not found.     |
 
 <!-- ### Example Response -->
 
+### Sources
+
+- [NodeConfigurationController.php#L17](https://github.com/pterodactyl/panel/blob/8abf2d810666c360320cc25808167d08963bb9be/app/Http/Controllers/Api/Application/Nodes/NodeConfigurationController.php#L17)
+
 ## Create Node
 
-### `POST /nodes`
+### `POST /api/application/nodes`
 
 Creates a node.
 
 ### Body
 
-| Key                 | Required | Type      | Description                                                    |
-| ------------------- | -------- | --------- | -------------------------------------------------------------- |
-| behind_proxy        | ✅       | `boolean` | Whether the node is behind a proxy                             |
-| daemon_base         | ✅       | `string`  | The daemon base for the node                                   |
-| daemon_listen       | ✅       | `number`  | The port for the daemon to listen on                           |
-| daemon_sftp         | ✅       | `number`  | The SFTP port for the node                                     |
-| description         | ❌       | `string`  | A description of the node                                      |
-| disk                | ✅       | `string`  | The disk space limit                                           |
-| disk_overallocate   | ✅       | `string`  | The overallocated disk space limit                             |
-| fqdn                | ✅       | `string`  | The FQDN of the node                                           |
-| location_id         | ✅       | `number`  | The location to create the node on                             |
-| maintenance_mode    | ❌       | `boolean` | Whether the node should be under maintenance mode when created |
-| memory              | ✅       | `number`  | The memory usage limit                                         |
-| memory_overallocate | ✅       | `string`  | The overallocated memory limit                                 |
-| name                | ✅       | `string`  | The name of the node                                           |
-| public              | ❌       | `boolean` | Whether the node is publicly accessible                        |
-| scheme              | ✅       | `string`  | The HTTP scheme for the node                                   |
-| upload_size         | ❌       | `number`  | The upload size for the node                                   |
+| Field               | Visibility | Type    | Description                                                     |
+| ------------------- | ---------- | ------- | --------------------------------------------------------------- |
+| behind_proxy        | required   | boolean | Whether the node is behind a proxy.                             |
+| daemon_base         | required   | string  | The daemon base for the node.                                   |
+| daemon_listen       | required   | number  | The port for the daemon to listen on.                           |
+| daemon_sftp         | required   | number  | The SFTP port for the node.                                     |
+| description         | optional   | string  | A description of the node.                                      |
+| disk                | required   | string  | The disk space limit.                                           |
+| disk_overallocate   | required   | string  | The overallocated disk space limit.                             |
+| fqdn                | required   | string  | The FQDN of the node.                                           |
+| location_id         | required   | number  | The location to create the node on.                             |
+| maintenance_mode    | optional   | boolean | Whether the node should be under maintenance mode when created. |
+| memory              | required   | number  | The memory usage limit.                                         |
+| memory_overallocate | required   | string  | The overallocated memory limit.                                 |
+| name                | required   | string  | The name of the node.                                           |
+| public              | optional   | boolean | Whether the node is publicly accessible.                        |
+| scheme              | required   | string  | The HTTP scheme for the node.                                   |
+| upload_size         | optional   | number  | The upload size for the node.                                   |
 
 ### Response
 
 | Code | Description                          |
 | ---- | ------------------------------------ |
-| 200  | The request was successful.          |
+| 201  | The request was successful.          |
 | 429  | One or more validation rules failed. |
 
 <!-- ### Example Response -->
 
+### Sources
+
+- [NodeController.php#L63](https://github.com/pterodactyl/panel/blob/8abf2d810666c360320cc25808167d08963bb9be/app/Http/Controllers/Api/Application/Nodes/NodeController.php#L63)
+
 ## Update Node
 
-### `PATCH /nodes/:id`
+### `PATCH /api/application/nodes/:id`
 
 Updates a node by its `id` (number).
 
 ### Body
 
-| Key                 | Required | Type      | Description                                                    |
-| ------------------- | -------- | --------- | -------------------------------------------------------------- |
-| behind_proxy        | ❌       | `boolean` | Whether the node is behind a proxy                             |
-| daemon_base         | ❌       | `string`  | The daemon base for the node                                   |
-| daemon_listen       | ❌       | `number`  | The port for the daemon to listen on                           |
-| daemon_sftp         | ❌       | `number`  | The SFTP port for the node                                     |
-| description         | ❌       | `string`  | A description of the node                                      |
-| disk                | ❌       | `string`  | The disk space limit                                           |
-| disk_overallocate   | ❌       | `string`  | The overallocated disk space limit                             |
-| fqdn                | ❌       | `string`  | The FQDN of the node                                           |
-| location_id         | ❌       | `number`  | The location to create the node on                             |
-| maintenance_mode    | ❌       | `boolean` | Whether the node should be under maintenance mode when created |
-| memory              | ❌       | `number`  | The memory usage limit                                         |
-| memory_overallocate | ❌       | `string`  | The overallocated memory limit                                 |
-| name                | ❌       | `string`  | The name of the node                                           |
-| public              | ❌       | `boolean` | Whether the node is publicly accessible                        |
-| scheme              | ❌       | `string`  | The HTTP scheme for the node                                   |
-| upload_size         | ❌       | `number`  | The upload size for the node                                   |
+| Field               | Visibility | Type    | Description                                                     |
+| ------------------- | ---------- | ------- | --------------------------------------------------------------- |
+| behind_proxy        | required   | boolean | Whether the node is behind a proxy.                             |
+| daemon_base         | required   | string  | The daemon base for the node.                                   |
+| daemon_listen       | required   | number  | The port for the daemon to listen on.                           |
+| daemon_sftp         | required   | number  | The SFTP port for the node.                                     |
+| description         | required   | string  | A description of the node.                                      |
+| disk                | required   | string  | The disk space limit.                                           |
+| disk_overallocate   | required   | string  | The overallocated disk space limit.                             |
+| fqdn                | required   | string  | The FQDN of the node.                                           |
+| location_id         | required   | number  | The location to create the node on.                             |
+| maintenance_mode    | required   | boolean | Whether the node should be under maintenance mode when created. |
+| memory              | required   | number  | The memory usage limit.                                         |
+| memory_overallocate | required   | string  | The overallocated memory limit.                                 |
+| name                | required   | string  | The name of the node.                                           |
+| public              | required   | boolean | Whether the node is publicly accessible.                        |
+| scheme              | required   | string  | The HTTP scheme for the node.                                   |
+| upload_size         | required   | number  | The upload size for the node.                                   |
 
 ### Response
 
@@ -316,6 +332,10 @@ Updates a node by its `id` (number).
 | 200  | The request was successful.          |
 | 404  | The node was not found.              |
 | 429  | One or more validation rules failed. |
+
+### Sources
+
+- [NodeController.php#L82](https://github.com/pterodactyl/panel/blob/8abf2d810666c360320cc25808167d08963bb9be/app/Http/Controllers/Api/Application/Nodes/NodeController.php#L82)
 
 ## Delete Node
 
@@ -325,7 +345,11 @@ Deletes a node by its `id` (number).
 
 ### Response
 
-| Code | Description                          |
-| ---- | ------------------------------------ |
-| 204  | The request was successful.          |
-| 404  | The node was not found.              |
+| Code | Description                 |
+| ---- | --------------------------- |
+| 204  | The request was successful. |
+| 404  | The node was not found.     |
+
+### Sources
+
+- [NodeController.php#L101](https://github.com/pterodactyl/panel/blob/8abf2d810666c360320cc25808167d08963bb9be/app/Http/Controllers/Api/Application/Nodes/NodeController.php#L101)
