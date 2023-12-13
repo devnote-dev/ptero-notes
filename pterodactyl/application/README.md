@@ -15,7 +15,17 @@ This API is for managing a lot of the administrative side of the panel, ranging 
 - - [Get Nest](./nests-eggs.md#get-nest)
 - - [Get Nest Eggs](./nests-eggs.md#get-nest-eggs)
 - - [Get Nest Egg](./nests-eggs.md#get-nest-egg)
-  <!-- TODO: Nodes -->
+- Nodes
+- - [Get Nodes](./nodes.md#get-nodes)
+- - [Get Deployable Nodes](./nodes.md#get-deployable-nodes)
+- - [Get Node](./nodes.md#get-node)
+- - [Get Node Allocations](./nodes.md#get-node-allocations)
+- - [Create Node Allocation](./nodes.md#create-node-allocation)
+- - [Delete Node Allocation](./nodes.md#delete-node-allocation)
+- - [Get Node Configuration](./nodes.md#get-node-configuration)
+- - [Create Node](./nodes.md#create-node)
+- - [Update Node](./nodes.md#update-node)
+- - [Delete Node](./nodes.md#delete-node)
 - Users
 - - [Get Users](./users.md#get-users)
 - - [Get User](./users.md#get-user)
