@@ -1,3 +1,12 @@
+## Contents
+
+- [Get Account Servers](#get-account-servers)
+- [Get Account Permissions](#get-account-permissions)
+
+---
+
+## Get Account Servers
+
 ### `GET /api/client`
 
 Returns all the servers available to the client making the API request, including servers the user has access to as a subuser.
@@ -82,6 +91,12 @@ Returns all the servers available to the client making the API request, includin
 }
 ```
 
+### Sources
+
+- [ClientController.php#L27](https://github.com/pterodactyl/panel/blob/a9bdf7a1ef27a65f07ebbf71d8ea20285cdaf30f/app/Http/Controllers/Api/Client/ClientController.php#L27)
+
+## Get Account Permissions
+
 ### `GET /api/client/permissions`
 
 Returns all the subuser permissions available on the system.
@@ -128,3 +143,7 @@ Returns all the subuser permissions available on the system.
   }
 }
 ```
+
+### Sources
+
+- [ClientController.php#L77](https://github.com/pterodactyl/panel/blob/a9bdf7a1ef27a65f07ebbf71d8ea20285cdaf30f/app/Http/Controllers/Api/Client/ClientController.php#L77)
