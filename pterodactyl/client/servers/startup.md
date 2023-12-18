@@ -1,4 +1,13 @@
-### `GET /api/client/servers/:serverId/startup`
+## Contents
+
+- [Get Server Startup](#get-server-startup)
+- [Update Server Startup Variable](#update-server-startup-variable)
+
+---
+
+## Get Server Startup
+
+### `GET /api/client/servers/:id/startup`
 
 Retrieves the startup information for a server, including all the variables.
 
@@ -35,7 +44,13 @@ Retrieves the startup information for a server, including all the variables.
 }
 ```
 
-### `PUT /api/client/servers/:serverId/startup/variable`
+### Sources
+
+- [StartupController.php#L30](https://github.com/pterodactyl/panel/blob/a9bdf7a1ef27a65f07ebbf71d8ea20285cdaf30f/app/Http/Controllers/Api/Client/Servers/StartupController.php#L30)
+
+## Update Server Startup Variable
+
+### `PUT /api/client/servers/:id/startup/variable`
 
 Updates a single variable for a server's startup.
 
@@ -43,13 +58,18 @@ Updates a single variable for a server's startup.
 
 | Name  | Visibility | Type   | Description                            |
 | ----- | ---------- | ------ | -------------------------------------- |
-| key   | Required   | string | The key of the variable to be updated. |
-| value | Required   | string | The new value of the variable.         |
+| key   | required   | string | The key of the variable to be updated. |
+| value | required   | string | The new value of the variable.         |
 
 ### Responses
 
 | Code | Description                           |
 | ---- | ------------------------------------- |
-| 200  | The variable was updated.             |
+| 200  | The request was successful.           |
 | 400  | The request body was invalid.         |
 | 404  | The server or variable was not found. |
+
+### Sources
+
+- [StartupController.php#L53](https://github.com/pterodactyl/panel/blob/a9bdf7a1ef27a65f07ebbf71d8ea20285cdaf30f/app/Http/Controllers/Api/Client/Servers/StartupController.php#L53)
+- [UpdateStartupVariableRequest.php#L8](https://github.com/pterodactyl/panel/blob/a9bdf7a1ef27a65f07ebbf71d8ea20285cdaf30f/app/Http/Requests/Api/Client/Servers/Startup/UpdateStartupVariableRequest.php#L8)
