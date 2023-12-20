@@ -16,9 +16,9 @@
 
 ---
 
-### Get Account
+## Get Account
 
-#### `GET /api/client/account`
+### `GET /api/client/account`
 
 Retrieves the account details of the authenticated user.
 
@@ -45,9 +45,9 @@ Retrieves the account details of the authenticated user.
 }
 ```
 
-### Get Account Two-Factor
+## Get Account Two-Factor
 
-#### `GET /api/client/account/two-factor`
+### `GET /api/client/account/two-factor`
 
 Returns a TOTP QR code, which can be used to set up two-factor authentication for a user's account.
 
@@ -69,9 +69,9 @@ Returns a TOTP QR code, which can be used to set up two-factor authentication fo
 }
 ```
 
-### Enable Account Two-Factor
+## Enable Account Two-Factor
 
-#### `POST /api/client/account/two-factor`
+### `POST /api/client/account/two-factor`
 
 Enables two-factor authentication for a user's account.
 
@@ -111,9 +111,9 @@ Enables two-factor authentication for a user's account.
 }
 ```
 
-### Disable Account Two-Factor
+## Disable Account Two-Factor
 
-#### `DELETE /api/client/account/two-factor`
+### `DELETE /api/client/account/two-factor`
 
 Disables two-factor authentication on a user's account.
 
@@ -130,9 +130,9 @@ Disables two-factor authentication on a user's account.
 | 204  | Two-factor authentication disabled successfully. |
 | 400  | Invalid password                                 |
 
-### Update Account Email
+## Update Account Email
 
-#### `PUT /api/client/account/email`
+### `PUT /api/client/account/email`
 
 Updates the authenticated user's email address.
 
@@ -150,9 +150,9 @@ Updates the authenticated user's email address.
 | 201  | The request was successful.      |
 | 400  | Invalid email format or password |
 
-### Update Account Password
+## Update Account Password
 
-#### `PUT /api/client/account/password`
+### `PUT /api/client/account/password`
 
 Updates the authenticated user's password.
 
@@ -170,9 +170,9 @@ Updates the authenticated user's password.
 | ---- | --------------------------- |
 | 204  | The request was successful. |
 
-### Get Account Activity
+## Get Account Activity
 
-#### `GET /api/client/account/activity`
+### `GET /api/client/account/activity`
 
 Returns a paginated set of the user's activity logs.
 
@@ -224,9 +224,9 @@ Returns a paginated set of the user's activity logs.
 }
 ```
 
-### Get Account SSH Keys
+## Get Account SSH Keys
 
-#### `GET /api/client/account/ssh-keys`
+### `GET /api/client/account/ssh-keys`
 
 Retrieves all the SSH keys configured for the authenticated user's account.
 
@@ -249,9 +249,9 @@ Retrieves all the SSH keys configured for the authenticated user's account.
 }
 ```
 
-### Create Account SSH Key
+## Create Account SSH Key
 
-#### `POST /api/client/account/ssh-keys`
+### `POST /api/client/account/ssh-keys`
 
 Creates a new SSH key for the authenticated user.
 
@@ -269,9 +269,9 @@ Creates a new SSH key for the authenticated user.
 | 200  | The SSH key was added.        |
 | 422  | Validation error(s) occurred. |
 
-### Remove Account SSH Key
+## Remove Account SSH Key
 
-#### `POST /api/client/account/ssh-keys/remove`
+### `POST /api/client/account/ssh-keys/remove`
 
 Deletes an SSH key from the user's account.
 
@@ -287,9 +287,9 @@ Deletes an SSH key from the user's account.
 | ---- | ------------------------------------- |
 | 204  | The SSH key was deleted successfully. |
 
-### Get Account API Keys
+## Get Account API Keys
 
-#### `GET /api/client/account/api-keys`
+### `GET /api/client/account/api-keys`
 
 Retrieves all the API keys that exist for the authenticated user's account.
 
@@ -315,9 +315,9 @@ Retrieves all the API keys that exist for the authenticated user's account.
 }
 ```
 
-### Create Account API Key
+## Create Account API Key
 
-#### `POST /api/client/account/api-keys`
+### `POST /api/client/account/api-keys`
 
 Creates a new API key for the authenticated user.
 
@@ -335,9 +335,9 @@ Creates a new API key for the authenticated user.
 | 200  | The request was successful.   |
 | 422  | Validation error(s) occurred. |
 
-### Delete Account API Key
+## Delete Account API Key
 
-#### `DELETE /api/client/account/api-keys/{identifier}`
+### `DELETE /api/client/account/api-keys/{identifier}`
 
 Deletes a specific API key from the user's account.
 
