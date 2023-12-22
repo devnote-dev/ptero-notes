@@ -1,12 +1,22 @@
+## Contents
+
+- [Get Remote Server Backups](#get-remote-server-backups)
+- [Update Remote Server Backup](#update-remote-server-backup)
+- [Restore Remote Server Backup](#restore-remote-server-backup)
+
+---
+
+## Get Remote Server Backups
+
 ### `GET /api/remote/backups/:backup`
 
 Returns the required presigned urls to upload a backup to S3 cloud storage.
 
 ### Parameters
 
-| Name | Visibility | Description           |
-| ---- | ---------- | --------------------- |
-| size | required   | The backup file size. |
+| Name | Visibility | Type   | Description           |
+| ---- | ---------- | ------ | --------------------- |
+| size | required   | number | The backup file size. |
 
 ### Responses
 
@@ -17,9 +27,11 @@ Returns the required presigned urls to upload a backup to S3 cloud storage.
 | 404  | The backup was not found.                                      |
 | 409  | The backup is already in completed state.                      |
 
-Sources
+### Sources
 
-- [app/Http/Controllers/Api/Remote/Backups/BackupRemoteUpl2oadController.php#L33](https://github.com/pterodactyl/panel/blob/v1.11.3/app/Http/Controllers/Api/Remote/Backups/BackupRemoteUploadController.php#L33)
+- [BackupRemoteUploadController.php#L33](https://github.com/pterodactyl/panel/blob/43f7c106172a68f9d81c84af34735373dc900395/app/Http/Controllers/Api/Remote/Backups/BackupRemoteUploadController.php#L33)
+
+## Update Remote Server Backup
 
 ### `POST /api/remote/backups/:backup`
 
@@ -52,21 +64,22 @@ Handles updating the state of a backup.
 }
 ```
 
-Note: `parts` can also be defined as an array with objects with the keys `etag` (string) and `part_number` (number).
+> [!TIP]
+> The `parts` field can also be defined as an array of objects with the fields `etag` (string) and and `part_number` (number).
 
 ### Responses
 
 | Code | Description                               |
 | ---- | ----------------------------------------- |
-| 204  | The response was successful.              |
+| 204  | The request was successful.               |
 | 400  | The backup is already in completed state. |
 | 404  | The backup was not found.                 |
 
-Sources
+### Sources
 
-- [app/Http/Controllers/Api/Remote/Backups/BackupStatusController.php#L31](https://github.com/pterodactyl/panel/blob/v1.11.3/app/Http/Controllers/Api/Remote/Backups/BackupStatusController.php#L31)
+- [BackupStatusController.php#L31](https://github.com/pterodactyl/panel/blob/43f7c106172a68f9d81c84af34735373dc900395/app/Http/Controllers/Api/Remote/Backups/BackupStatusController.php#L31)
 
----
+## Restore Remote Server Backup
 
 ### `POST /api/remote/backups/:backup/restore`
 
@@ -80,11 +93,11 @@ Handles toggling the restoration status of a server.
 
 ### Responses
 
-| Code | Description                  |
-| ---- | ---------------------------- |
-| 204  | The response was successful. |
-| 404  | The backup was not found.    |
+| Code | Description                 |
+| ---- | --------------------------- |
+| 204  | The request was successful. |
+| 404  | The backup was not found.   |
 
-Sources
+### Sources
 
-- [app/Http/Controllers/Api/Remote/Backups/BackupStatusController.php#L78](https://github.com/pterodactyl/panel/blob/v1.11.3/app/Http/Controllers/Api/Remote/Backups/BackupStatusController.php#L78)
+- [BackupStatusController.php#L78](https://github.com/pterodactyl/panel/blob/43f7c106172a68f9d81c84af34735373dc900395/app/Http/Controllers/Api/Remote/Backups/BackupStatusController.php#L78)
