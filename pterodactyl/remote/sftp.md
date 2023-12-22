@@ -1,3 +1,11 @@
+## Contents
+
+- [Authenticate SFTP](#authenticate-sftp)
+
+---
+
+## Authenticate SFTP
+
 ### `POST /api/remote/sftp/auth`
 
 Authenticate a set of credentials and return the associated server details for a SFTP connection on the daemon. This supports both public key and password based credentials.
@@ -12,13 +20,13 @@ Authenticate a set of credentials and return the associated server details for a
 
 ### Responses
 
-| Code | Description                              |
-| ---- | ---------------------------------------- |
-| 200  | The response was successful.             |
-| 403  | Incorrect credentials.                   |
-| 422  | Missing fields. (ex. username, password) |
+| Code | Description                          |
+| ---- | ------------------------------------ |
+| 200  | The request was successful.          |
+| 403  | Incorrect credentials.               |
+| 422  | One or more validation rules failed. |
 
-### Response example
+### Example Response
 
 ```json
 {
@@ -33,6 +41,6 @@ Authenticate a set of credentials and return the associated server details for a
 }
 ```
 
-Sources
+### Sources
 
-- [app/Http/Controllers/Api/Remote/SftpAuthenticationController.php#L34](https://github.com/pterodactyl/panel/blob/v1.11.3/app/Http/Controllers/Api/Remote/SftpAuthenticationController.php#L34)
+- [SftpAuthenticationController.php#L34](https://github.com/pterodactyl/panel/blob/43f7c106172a68f9d81c84af34735373dc900395/app/Http/Controllers/Api/Remote/SftpAuthenticationController.php#L34)
