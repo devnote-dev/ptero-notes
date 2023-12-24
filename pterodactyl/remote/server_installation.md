@@ -1,3 +1,13 @@
+## Contents
+
+- [Get Remote Server Configuration](#get-remote-server-configuration)
+- [Get Remote Server Installation](#get-remote-server-installation)
+- [Update Remote Server Installation](#update-remote-server-installation)
+
+---
+
+## Get Remote Server Configuration
+
 ### `GET /api/remote/servers/:uuid`
 
 Returns details about the server that allows Wings to self-recover and ensure that the state of the server matches the Panel at all times.
@@ -9,7 +19,7 @@ Returns details about the server that allows Wings to self-recover and ensure th
 | 200  | The request was successful. |
 | 404  | The server was not found.   |
 
-### Response example
+### Example Response
 
 ```json
 {
@@ -96,11 +106,11 @@ Returns details about the server that allows Wings to self-recover and ensure th
 }
 ```
 
-Sources
+### Sources
 
-- [app/Http/Controllers/Api/Remote/Servers/ServerDetailsController.php#L35](https://github.com/pterodactyl/panel/blob/v1.11.3/app/Http/Controllers/Api/Remote/Servers/ServerDetailsController.php#L35)
+- [ServerDetailsController.php#L35](https://github.com/pterodactyl/panel/blob/43f7c106172a68f9d81c84af34735373dc900395/app/Http/Controllers/Api/Remote/Servers/ServerDetailsController.php#L35)
 
----
+## Get Remote Server Installation
 
 ### `GET /api/remote/servers/:uuid/install`
 
@@ -113,7 +123,7 @@ Returns installation information for a server.
 | 200  | The request was successful. |
 | 404  | The server was not found.   |
 
-### Response example
+### Example Response
 
 ```json
 {
@@ -123,11 +133,11 @@ Returns installation information for a server.
 }
 ```
 
-Sources
+### Sources
 
-- [app/Http/Controllers/Api/Remote/Servers/ServerInstallController.php#L30](https://github.com/pterodactyl/panel/blob/v1.11.3/app/Http/Controllers/Api/Remote/Servers/ServerInstallController.php#L30)
+- [ServerInstallController.php#L30](https://github.com/pterodactyl/panel/blob/43f7c106172a68f9d81c84af34735373dc900395/app/Http/Controllers/Api/Remote/Servers/ServerInstallController.php#L30)
 
----
+## Update Remote Server Installation
 
 ### `POST /api/remote/servers/:uuid/install`
 
@@ -147,6 +157,6 @@ Updates the installation state of a server.
 | 204  | The request was successful. |
 | 404  | The server was not found.   |
 
-Sources
+### Sources
 
-- [app/Http/Controllers/Api/Remote/Servers/ServerInstallController.php#L48](https://github.com/pterodactyl/panel/blob/v1.11.3/app/Http/Controllers/Api/Remote/Servers/ServerInstallController.php#L48)
+- [ServerInstallController.php#L48](https://github.com/pterodactyl/panel/blob/43f7c106172a68f9d81c84af34735373dc900395/app/Http/Controllers/Api/Remote/Servers/ServerInstallController.php#L48)
