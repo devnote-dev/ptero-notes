@@ -136,6 +136,8 @@ Return a user by its `external_id` (string).
 
 ## Create User
 
+### `POST /api/application/users`
+
 Creates a user.
 
 ### Body
