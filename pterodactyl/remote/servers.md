@@ -1,3 +1,13 @@
+## Contents
+
+- [Get Remote Servers](#get-remote-servers)
+- [Reset Remote Servers](#reset-remote-servers)
+- [Add Remote Server Activities](#add-remote-server-activities)
+
+---
+
+## Get Remote Servers
+
 ### `GET /api/remote/servers`
 
 Lists all servers with their configurations that are assigned to the requesting node.
@@ -15,7 +25,7 @@ Lists all servers with their configurations that are assigned to the requesting 
 | ---- | --------------------------- |
 | 200  | The request was successful. |
 
-### Response example
+### Example Response
 
 ```json
 {
@@ -149,11 +159,11 @@ Lists all servers with their configurations that are assigned to the requesting 
 }
 ```
 
-Sources
+### Sources
 
-- [https://github.com/pterodactyl/panel/blob/v1.11.3/app/Http/Controllers/Api/Remote/Servers/ServerDetailsController.php#L49](app/Http/Controllers/Api/Remote/Servers/ServerDetailsController.php#L49)
+- [ServerDetailsController.php#L48](https://github.com/pterodactyl/panel/blob/43f7c106172a68f9d81c84af34735373dc900395/app/Http/Controllers/Api/Remote/Servers/ServerDetailsController.php#L48)
 
----
+## Reset Remote Servers
 
 ### `POST /api/remote/servers/reset`
 
@@ -165,13 +175,15 @@ Resets the state of all servers on the node to be normal.
 | ---- | --------------------------- |
 | 204  | The request was successful. |
 
-Sources
+### Sources
 
-- [app/Http/Controllers/Api/Remote/Servers/ServerDetailsController.php#L72](https://github.com/pterodactyl/panel/blob/v1.11.3/app/Http/Controllers/Api/Remote/Servers/ServerDetailsController.php#L72)
+- [ServerDetailsController.php#L72](https://github.com/pterodactyl/panel/blob/43f7c106172a68f9d81c84af34735373dc900395/app/Http/Controllers/Api/Remote/Servers/ServerDetailsController.php#L72)
 
----
+## Add Remote Server Activities
 
 ### `POST /api/remote/activity`
+
+<!-- TODO: no description?? -->
 
 ### Body
 
@@ -198,18 +210,20 @@ Sources
 }
 ```
 
+<!-- TODO: fix this
 - `metadata` depends on the event. It can be null, a string, or a json blob with event specific metadata.
 - `ip` has to be an IP address or empty string.
 - `user` has to be a user UUID or undefined.
 - `events` are activity events. You can find a list of them by [clicking here](activity_events.md).
+-->
 
 ### Responses
 
-| Code | Description                                    |
-| ---- | ---------------------------------------------- |
-| 200  | The response was successful. (no request body) |
-| 422  | Incorrect field data.                          |
+| Code | Description                          |
+| ---- | ------------------------------------ |
+| 200  | The request was successful.          |
+| 422  | One or more validation rules failed. |
 
-Sources
+### Sources
 
-- [app/Http/Controllers/Api/Remote/ActivityProcessingController.php#L20](https://github.com/pterodactyl/panel/blob/v1.11.3/app/Http/Controllers/Api/Remote/ActivityProcessingController.php#L20)
+- [ActivityProcessingController.php#L20](https://github.com/pterodactyl/panel/blob/43f7c106172a68f9d81c84af34735373dc900395/app/Http/Controllers/Api/Remote/ActivityProcessingController.php#L20)
