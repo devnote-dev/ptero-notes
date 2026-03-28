@@ -157,7 +157,7 @@ Creates a user.
 
 | Code | Description                          |
 | ---- | ------------------------------------ |
-| 200  | The request was successful.          |
+| 201  | The request was successful.          |
 | 422  | One or more validation rules failed. |
 
 ### Sources

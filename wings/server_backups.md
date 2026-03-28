@@ -39,7 +39,7 @@ Sources:
 
 ### `DELETE /api/servers/:uuid/backup/:id`
 
-Deletes a specified backup from a server.
+Deletes a specified local backup from a server.
 
 ### Responses
 
@@ -51,3 +51,6 @@ Deletes a specified backup from a server.
 Sources:
 
 - [router_server_backup.go#L178](https://github.com/pterodactyl/wings/blob/release/v1.11.2/router/router_server_backup.go#L178)
+
+> [!INFORMATION]
+> This is only used when the backup adapter is `wings`. If you're looking for how `s3` backups are deleted, check out [/app/Services/Backups/DeleteBackupService.php](https://github.com/pterodactyl/panel/blob/1570ff250939b75b3ba8cd03e5025d8293544ed4/app/Services/Backups/DeleteBackupService.php#L68) on the panel instead.

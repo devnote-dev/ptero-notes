@@ -139,7 +139,30 @@ Sources:
 
 - [router/router_server.go#L142](https://github.com/pterodactyl/wings/blob/release/v1.11.2/router/router_server.go#L142)
 
+### `POST /api/deauthorize-user`
+
+Disconnects user from server websockets and SFTP sessions.
+
+### Body
+
+| Field    | Visibility | Type            | Description                     |
+| -------- | ---------- | --------------- | ------------------------------- |
+| user     | required   | string          | The UUID of the user to deny.   |
+| servers  | required   | array of string | A list of server UUIDs to deny. |
+
+### Responses
+
+| Code | Description                 |
+| ---- | --------------------------- |
+| 204  | The request was successful. |
+
+Sources:
+
+- [router/router_system.go#L159](https://github.com/pterodactyl/wings/blob/a97e8ae09fd682057ef229d4940d6dcb0cdaf3af/router/router_system.go#L159)
+
 ### `POST /api/servers/:uuid/ws/deny`
+
+> Deprecated. Use `POST /api/deauthorize-user` instead.
 
 Adds the given JWT IDs (or "jti"s) to the server websocket's deny list, preventing tokens with the JTIs from connecting or interacting with the server websocket.
 

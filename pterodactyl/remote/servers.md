@@ -75,7 +75,13 @@ Lists all servers with their configurations that are assigned to the requesting 
             "192.168.228.1": [25565]
           }
         },
-        "mounts": [],
+        "mounts": [
+          {
+            "source": "/root/mnt",
+            "target": "/root/mnt",
+            "read_only": false
+          }
+        ],
         "egg": {
           "id": "b3e7a6b9-1cc9-4d3e-9372-88b6d96c6b0f",
           "file_denylist": []
@@ -158,6 +164,9 @@ Lists all servers with their configurations that are assigned to the requesting 
   }
 }
 ```
+
+> [!TIP]
+> The `mounts` field can also be defined as an array of objects with the fields `source` (string), `target` (string) and `read_only` (boolean).
 
 ### Sources
 
